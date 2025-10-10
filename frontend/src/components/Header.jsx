@@ -60,7 +60,8 @@ const Header = ({ onOpenAISearch }) => {
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors"
                     data-testid="nav-eventos"
                   >
-                    \ud83c\udfaa Kioskos para Eventos
+                    <div className="font-medium">Arriendo Kioskos Eventos</div>
+                    <div className="text-xs text-gray-500">Festivales y conferencias</div>
                   </Link>
                   <Link
                     to="/aeropuerto-charger"
