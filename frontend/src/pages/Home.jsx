@@ -162,6 +162,19 @@ const Home = () => {
         </div>
       </section>
 
+      {/* KPI Vertical Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Impacto Global</h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Métricas que demuestran nuestro alcance y compromiso con la excelencia
+            </p>
+          </div>
+          <KPIVertical />
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-white" data-testid="services-section">
         <div className="container mx-auto px-4">
