@@ -89,7 +89,7 @@ const Home = () => {
               Tecnología para tiendas, sin enredos
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-              Buenas Ideas, lindos diseños, Hardware + Software integrados, soporte cercano y cero drama.
+              Lo pensamos, lo integramos, lo acompañamos, cero dramas.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
