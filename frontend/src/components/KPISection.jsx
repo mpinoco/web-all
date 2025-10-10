@@ -13,8 +13,8 @@ const KPISection = ({ variant = 'main' }) => {
   ];
 
   const compactKPIs = [
-    { number: 17, suffix: ' años', label: 'dando soluciones al Retail', duration: 1200 },
-    { number: 20, suffix: ' millones', label: 'de transacciones al mes', duration: 1200 }
+    { number: 17, suffix: ' años', label: 'dando soluciones al Retail', duration: 1800 },
+    { number: 20, suffix: ' millones', label: 'de transacciones al mes', duration: 1800 }
   ];
 
   const kpis = variant === 'compact' ? compactKPIs : mainKPIs;
