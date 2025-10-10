@@ -267,6 +267,12 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Partners Carousel */}
+      <PartnersCarousel />
+
+      {/* Clients Grid */}
+      <ClientsGrid />
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-800 via-emerald-700 to-teal-800 text-white" data-testid="cta-section">
         <div className="container mx-auto px-4 text-center">
