@@ -91,7 +91,7 @@ const Header = ({ onOpenAISearch }) => {
 
             <Button
               data-testid="whatsapp-header-button"
-              className="hidden md:flex items-center space-x-2 bg-green-600 hover:bg-green-700"
+              className="hidden md:flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-700"
             >
               <MessageCircle className="w-4 h-4" />
               <span>WhatsApp</span>
