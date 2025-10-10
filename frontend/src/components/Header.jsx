@@ -29,8 +29,8 @@ const Header = ({ onOpenAISearch }) => {
             <Link
               to="/"
               data-testid="nav-home"
-              className={`text-sm font-medium hover:text-slate-700 transition-colors ${
-                isActive('/') ? 'text-slate-900' : 'text-gray-600'
+              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
+                isActive('/') ? 'text-emerald-700' : 'text-gray-600'
               }`}
             >
               Inicio
@@ -38,17 +38,52 @@ const Header = ({ onOpenAISearch }) => {
             <Link
               to="/productos"
               data-testid="nav-products"
-              className={`text-sm font-medium hover:text-slate-700 transition-colors ${
-                isActive('/productos') ? 'text-slate-900' : 'text-gray-600'
+              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
+                isActive('/productos') ? 'text-emerald-700' : 'text-gray-600'
               }`}
             >
               Productos
             </Link>
+            
+            {/* Soluciones Dropdown */}
+            <div className="relative group">
+              <button className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors flex items-center">
+                Soluciones
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link
+                    to="/eventos-kioskos"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors"
+                    data-testid="nav-eventos"
+                  >
+                    \ud83c\udfaa Kioskos para Eventos
+                  </Link>
+                  <Link
+                    to="/aeropuerto-charger"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    data-testid="nav-aeropuerto"
+                  >
+                    \u2708\ufe0f Cargadores Aeropuertos
+                  </Link>
+                  <Link
+                    to="/alianza-justo"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-lime-50 hover:text-lime-700 transition-colors"
+                    data-testid="nav-justo"
+                  >
+                    \ud83c\udf74 ALLCOM + JUSTO POS
+                  </Link>
+                </div>\n              </div>
+            </div>
+            
             <Link
               to="/servicios"
               data-testid="nav-services"
-              className={`text-sm font-medium hover:text-slate-700 transition-colors ${
-                isActive('/servicios') ? 'text-slate-900' : 'text-gray-600'
+              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
+                isActive('/servicios') ? 'text-emerald-700' : 'text-gray-600'
               }`}
             >
               Servicios
@@ -56,8 +91,8 @@ const Header = ({ onOpenAISearch }) => {
             <Link
               to="/contacto"
               data-testid="nav-contact"
-              className={`text-sm font-medium hover:text-slate-700 transition-colors ${
-                isActive('/contacto') ? 'text-slate-900' : 'text-gray-600'
+              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
+                isActive('/contacto') ? 'text-emerald-700' : 'text-gray-600'
               }`}
             >
               Contacto
