@@ -4,6 +4,7 @@ import axios from 'axios';
 import { ArrowRight, Scale, Monitor, CreditCard, Smartphone, Truck, ShieldCheck, Code, Headset } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import KPISection from '../components/KPISection';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
@@ -80,22 +81,6 @@ const Home = () => {
                   <Link to="/contacto">Hablar por WhatsApp</Link>
                 </Button>
               </div>
-
-              {/* KPIs */}
-              <div className="grid grid-cols-3 gap-6 mt-12">
-                <div>
-                  <div className="text-3xl font-bold text-slate-700">15+</div>
-                  <div className="text-sm text-gray-600">Años de experiencia</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-slate-700">500+</div>
-                  <div className="text-sm text-gray-600">Proyectos entregados</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-slate-700">10K+</div>
-                  <div className="text-sm text-gray-600">Dispositivos activos</div>
-                </div>
-              </div>
             </div>
 
             <div className="slide-up hidden md:block">
@@ -109,6 +94,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Main KPI Section - Full 6 indicators */}
+      <KPISection variant="main" />
+
       {/* Categories Section */}
       <section className="py-20 bg-white" data-testid="categories-section">
         <div className="container mx-auto px-4">
@@ -117,6 +105,11 @@ const Home = () => {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Hardware especializado para retail, bancos y servicios
             </p>
+          </div>
+
+          {/* Compact KPI Section - 2 indicators */}
+          <div className="mb-12">
+            <KPISection variant="compact" />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
