@@ -14,8 +14,8 @@ const EventosKioskos = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(/evento-hero.jpg)' }}
         ></div>
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#23C7C2]/80 via-[#1DA89E]/75 to-[#188F8A]/80"></div>
+        {/* Dark Overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40"></div>
         
         <div className="relative container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
