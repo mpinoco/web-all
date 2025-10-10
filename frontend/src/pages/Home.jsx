@@ -201,7 +201,7 @@ const Home = () => {
               asChild
               size="lg"
               data-testid="services-cta"
-              className="bg-slate-700 hover:bg-slate-800"
+              className="bg-emerald-600 hover:bg-emerald-700 shadow-lg"
             >
               <Link to="/servicios">Ver todos los servicios</Link>
             </Button>
