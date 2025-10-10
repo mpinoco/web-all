@@ -1,53 +1,95 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import '@/App.css';
+import Home from './pages/Home';
+import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import QuoteCart from './pages/QuoteCart';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
+import AISearchModal from './components/AISearchModal';
+import { Toaster } from './components/ui/sonner';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+export const QuoteContext = React.createContext();
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
+function App() {
+  const [quoteItems, setQuoteItems] = useState([]);
+  const [showAISearch, setShowAISearch] = useState(false);
+
+  // Load quote items from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('quoteItems');
+    if (saved) {
+      setQuoteItems(JSON.parse(saved));
+    }
+  }, []);
+
+  // Save quote items to localStorage
+  useEffect(() => {
+    localStorage.setItem('quoteItems', JSON.stringify(quoteItems));
+  }, [quoteItems]);
+
+  const addToQuote = (product) => {
+    const existingItem = quoteItems.find(item => item.product_id === product.id);
+    if (existingItem) {
+      setQuoteItems(quoteItems.map(item => 
+        item.product_id === product.id 
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      ));
+    } else {
+      setQuoteItems([...quoteItems, {
+        product_id: product.id,
+        product_name: product.name,
+        quantity: 1,
+        notes: ''
+      }]);
     }
   };
 
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
+  const updateQuoteItem = (productId, updates) => {
+    setQuoteItems(quoteItems.map(item =>
+      item.product_id === productId ? { ...item, ...updates } : item
+    ));
+  };
+
+  const removeFromQuote = (productId) => {
+    setQuoteItems(quoteItems.filter(item => item.product_id !== productId));
+  };
+
+  const clearQuote = () => {
+    setQuoteItems([]);
+  };
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <QuoteContext.Provider value={{ 
+      quoteItems, 
+      addToQuote, 
+      updateQuoteItem, 
+      removeFromQuote,
+      clearQuote
+    }}>
+      <div className="App">
+        <BrowserRouter>
+          <Header onOpenAISearch={() => setShowAISearch(true)} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/productos" element={<Products />} />
+            <Route path="/producto/:slug" element={<ProductDetail />} />
+            <Route path="/servicios" element={<Services />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/cotizacion" element={<QuoteCart />} />
+          </Routes>
+          <Footer />
+          <WhatsAppButton />
+          <AISearchModal open={showAISearch} onClose={() => setShowAISearch(false)} />
+          <Toaster position="top-right" />
+        </BrowserRouter>
+      </div>
+    </QuoteContext.Provider>
   );
 }
 
