@@ -178,9 +178,9 @@ const Home = () => {
                 <div
                   key={service.id}
                   data-testid={`service-card-${service.slug}`}
-                  className="bg-white rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  className="bg-gradient-to-br from-white to-emerald-50 border border-emerald-100 rounded-lg p-6 hover:shadow-lg hover:border-emerald-200 transition-all"
                 >
-                  <IconComponent className="w-10 h-10 text-slate-700 mb-4" />
+                  <IconComponent className="w-10 h-10 text-emerald-600 mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
                   <p className="text-sm text-gray-600 mb-4">{service.summary}</p>
                   <ul className="space-y-1">
