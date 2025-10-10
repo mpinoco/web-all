@@ -1,0 +1,26 @@
+# robots.txt para ALLCOM
+# Permite el acceso a todos los buscadores
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://allcom.cl/sitemap.xml
+
+# Bloquear acceso a archivos sensibles (opcional)
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /static/
+
+# Rastreadores específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay (opcional, ajustar según necesidad)
+# Crawl-delay: 1
