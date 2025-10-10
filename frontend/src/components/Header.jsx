@@ -57,7 +57,7 @@ const Header = ({ onOpenAISearch }) => {
                 <div className="py-2">
                   <Link
                     to="/eventos-kioskos"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors border-l-2 border-transparent hover:border-cyan-500"
                     data-testid="nav-eventos"
                   >
                     <div className="font-medium">Arriendo Kioskos Eventos</div>
