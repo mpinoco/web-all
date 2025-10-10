@@ -45,50 +45,58 @@ const Home = () => {
 
   return (
     <main>
-      {/* Hero Section */}
+      {/* Hero Section with Video Background */}
       <section 
-        className="relative bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200 py-20 md:py-32 overflow-hidden"
+        className="relative h-[70vh] md:h-[80vh] overflow-hidden"
         data-testid="hero-section"
       >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="fade-in">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Tecnología robusta para operar el retail sin fricción
-              </h1>
-              <p className="text-xl text-gray-700 mb-8">
-                Integramos hardware y software para cajas, kioskos y puntos de venta. Rendimiento, soporte y escalabilidad.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  data-testid="hero-cta-products"
-                  className="bg-slate-700 hover:bg-slate-800 text-white"
-                >
-                  <Link to="/productos">
-                    Ver soluciones
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  data-testid="hero-cta-contact"
-                  className="border-slate-700 text-slate-700 hover:bg-slate-50"
-                >
-                  <Link to="/contacto">Hablar por WhatsApp</Link>
-                </Button>
-              </div>
-            </div>
+        {/* Video Background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source 
+            src="https://customer-assets.emergentagent.com/job_ecommerce-liviano/artifacts/6ygqe10q_video_intro_allcom.mp4" 
+            type="video/mp4" 
+          />
+        </video>
 
-            <div className="slide-up hidden md:block">
-              <img
-                src="https://images.unsplash.com/photo-1556742031-c6961e8560b0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxQT1MlMjB0ZXJtaW5hbHxlbnwwfHx8fDE3NjAxMjU3OTF8MA&ixlib=rb-4.1.0&q=85"
-                alt="Terminal POS"
-                className="rounded-2xl shadow-2xl"
-              />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        {/* Content */}
+        <div className="relative h-full container mx-auto px-4 flex items-center">
+          <div className="max-w-4xl fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Tecnología robusta para operar el retail sin fricción
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
+              Integramos hardware y software para cajas, kioskos y puntos de venta. Rendimiento, soporte y escalabilidad.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                asChild
+                size="lg"
+                data-testid="hero-cta-products"
+                className="bg-white text-slate-900 hover:bg-gray-100"
+              >
+                <Link to="/productos">
+                  Ver soluciones
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                data-testid="hero-cta-contact"
+                className="border-white text-white hover:bg-white hover:text-slate-900"
+              >
+                <Link to="/contacto">Hablar por WhatsApp</Link>
+              </Button>
             </div>
           </div>
         </div>
