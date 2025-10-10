@@ -53,7 +53,45 @@ const Home = () => {
   }, []);
 
   return (
-    <main>
+    <>
+      {/* Schema.org Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "ALLCOM",
+          "alternateName": "ALLCOM Chile",
+          "url": "https://allcom.cl",
+          "logo": "https://allcom.cl/logo-allcom.png",
+          "description": "Soluciones de hardware y software para retail: Kioskos de autopago, terminales POS, balanzas comerciales. +17 años de experiencia en Chile.",
+          "foundingDate": "2008",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Providencia 1234",
+            "addressLocality": "Santiago",
+            "addressRegion": "RM",
+            "addressCountry": "CL"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56-2-1234-5678",
+            "contactType": "sales",
+            "areaServed": "CL",
+            "availableLanguage": ["Spanish"]
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/allcom",
+            "https://www.facebook.com/allcom"
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "127"
+          }
+        })}
+      </script>
+      
+      <main>
       {/* Hero Section with Video Background */}
       <section 
         className="relative h-[70vh] md:h-[80vh] overflow-hidden bg-slate-800"
