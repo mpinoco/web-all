@@ -118,7 +118,9 @@ const Home = () => {
       </section>
 
       {/* Main KPI Section - Full 6 indicators */}
-      <KPISection variant="main" />
+      <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700">
+        <KPISection variant="main" />
+      </section>
 
       {/* Categories Section */}
       <section className="py-20 bg-white" data-testid="categories-section">
