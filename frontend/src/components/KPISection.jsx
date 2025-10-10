@@ -124,13 +124,13 @@ const KPISection = ({ variant = 'main' }) => {
             >
               <div
                 data-number
-                className={`${textColor} font-bold text-4xl md:text-5xl lg:text-6xl mb-2 tracking-tight`}
+                className={`${textColor} font-bold ${numberSize} mb-1 tracking-tight`}
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 0{kpi.suffix}
               </div>
               <div
-                className={`${textColor} ${labelOpacity} text-sm md:text-base lg:text-lg tracking-wide lowercase`}
+                className={`${textColor} ${labelOpacity} ${labelSize} tracking-wide lowercase`}
                 style={{ fontFamily: 'Open Sans, sans-serif' }}
               >
                 {kpi.label}
