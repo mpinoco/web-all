@@ -90,9 +90,15 @@ const KPISection = ({ variant = 'main' }) => {
   const textColor = variant === 'main' ? 'text-white' : 'text-[#2a374a]';
   const labelOpacity = variant === 'main' ? 'opacity-80' : 'opacity-70';
   const gridCols = variant === 'main' 
-    ? 'grid-cols-2 md:grid-cols-3 lg:grid-cols-6' 
+    ? 'grid-cols-2 md:grid-cols-4' 
     : 'grid-cols-1 md:grid-cols-2';
-  const padding = variant === 'main' ? 'py-16 md:py-20 lg:py-24' : 'py-8 md:py-12';
+  const padding = variant === 'main' ? 'py-12 md:py-16' : 'py-8 md:py-12';
+  const numberSize = variant === 'main' 
+    ? 'text-3xl md:text-4xl lg:text-5xl' 
+    : 'text-4xl md:text-5xl lg:text-6xl';
+  const labelSize = variant === 'main'
+    ? 'text-xs md:text-sm'
+    : 'text-sm md:text-base lg:text-lg';
 
   return (
     <section
