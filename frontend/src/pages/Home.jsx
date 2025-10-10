@@ -47,7 +47,7 @@ const Home = () => {
     <main>
       {/* Hero Section with Video Background */}
       <section 
-        className="relative h-[70vh] md:h-[80vh] overflow-hidden"
+        className="relative h-[70vh] md:h-[80vh] overflow-hidden bg-slate-800"
         data-testid="hero-section"
       >
         {/* Video Background */}
@@ -56,16 +56,22 @@ const Home = () => {
           loop
           muted
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
+          onError={(e) => {
+            console.log('Video failed to load, using fallback background');
+            e.target.style.display = 'none';
+          }}
         >
           <source 
             src="https://customer-assets.emergentagent.com/job_ecommerce-liviano/artifacts/6ygqe10q_video_intro_allcom.mp4" 
             type="video/mp4" 
           />
+          Tu navegador no soporta el tag de video.
         </video>
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70"></div>
 
         {/* Content */}
         <div className="relative h-full container mx-auto px-4 flex items-center">
