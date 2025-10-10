@@ -76,7 +76,8 @@ const Header = ({ onOpenAISearch }) => {
                     className="block px-4 py-2 text-sm text-gray-700 hover:bg-lime-50 hover:text-lime-700 transition-colors"
                     data-testid="nav-justo"
                   >
-                    \ud83c\udf74 ALLCOM + JUSTO POS
+                    <div className="font-medium">Software POS Restaurantes</div>
+                    <div className="text-xs text-gray-500">Alianza ALLCOM + JUSTO</div>
                   </Link>
                 </div>\n              </div>
             </div>
