@@ -96,7 +96,7 @@ const Home = () => {
                 asChild
                 size="lg"
                 data-testid="hero-cta-products"
-                className="bg-white text-slate-900 hover:bg-gray-100"
+                className="bg-emerald-500 text-white hover:bg-emerald-600 shadow-lg"
               >
                 <Link to="/productos">
                   Ver soluciones
@@ -108,7 +108,7 @@ const Home = () => {
                 size="lg"
                 variant="outline"
                 data-testid="hero-cta-contact"
-                className="border-white text-white hover:bg-white hover:text-slate-900"
+                className="border-emerald-400 text-emerald-400 hover:bg-emerald-500 hover:text-white hover:border-emerald-500"
               >
                 <Link to="/contacto">Hablar por WhatsApp</Link>
               </Button>
