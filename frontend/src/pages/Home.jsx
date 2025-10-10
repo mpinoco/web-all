@@ -221,7 +221,7 @@ const Home = () => {
               asChild
               size="lg"
               data-testid="cta-quote"
-              className="bg-white text-slate-900 hover:bg-gray-100"
+              className="bg-white text-emerald-800 hover:bg-emerald-50 shadow-lg"
             >
               <Link to="/cotizacion">Solicitar cotización</Link>
             </Button>
@@ -230,7 +230,7 @@ const Home = () => {
               size="lg"
               variant="outline"
               data-testid="cta-contact"
-              className="border-white text-white hover:bg-white hover:text-slate-900"
+              className="border-white text-white hover:bg-white hover:text-emerald-800"
             >
               <Link to="/contacto">Contactar ahora</Link>
             </Button>
