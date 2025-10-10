@@ -6,12 +6,10 @@ const KPISection = ({ variant = 'main' }) => {
 
   // KPI Data
   const mainKPIs = [
-    { number: 5000, suffix: '+', label: 'dispositivos', duration: 1200 },
-    { number: 400, suffix: '+', label: 'locales', duration: 1200 },
-    { number: 250, suffix: '+', label: 'proyectos completados', duration: 1200 },
-    { number: 30, suffix: '+', label: 'colaboradores', duration: 1200 },
-    { number: 20, suffix: ' millones', label: 'de interacciones al mes', duration: 1200 },
-    { number: 17, suffix: ' años', label: 'de experiencia', duration: 1200 }
+    { number: 5000, suffix: '+', label: 'dispositivos', duration: 1800 },
+    { number: 400, suffix: '+', label: 'locales', duration: 1800 },
+    { number: 250, suffix: '+', label: 'proyectos completados', duration: 1800 },
+    { number: 30, suffix: '+', label: 'colaboradores', duration: 1800 }
   ];
 
   const compactKPIs = [
