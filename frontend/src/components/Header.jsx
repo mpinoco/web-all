@@ -65,7 +65,7 @@ const Header = ({ onOpenAISearch }) => {
                   </Link>
                   <Link
                     to="/aeropuerto-charger"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border-l-2 border-transparent hover:border-blue-500"
                     data-testid="nav-aeropuerto"
                   >
                     <div className="font-medium">Cargadores Aeropuertos</div>
