@@ -148,8 +148,8 @@ const Home = () => {
                   onClick={() => window.location.href = `/productos?category=${category.slug}`}
                 >
                   <CardContent className="p-6">
-                    <div className="w-14 h-14 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-                      <IconComponent className="w-7 h-7 text-slate-700" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg flex items-center justify-center mb-4">
+                      <IconComponent className="w-7 h-7 text-emerald-700" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.name}</h3>
                     <p className="text-sm text-gray-600">{category.description}</p>
