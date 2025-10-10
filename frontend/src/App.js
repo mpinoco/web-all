@@ -85,6 +85,9 @@ function App() {
             <Route path="/servicios" element={<Services />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/cotizacion" element={<QuoteCart />} />
+            <Route path="/eventos-kioskos" element={<EventosKioskos />} />
+            <Route path="/aeropuerto-charger" element={<AeropuertoCharger />} />
+            <Route path="/alianza-justo" element={<AlianzaJusto />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
