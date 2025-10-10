@@ -123,7 +123,7 @@ const Home = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="py-20 bg-white" data-testid="categories-section">
+      <section className="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" data-testid="categories-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Soluciones para cada necesidad</h2>
