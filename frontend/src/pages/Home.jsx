@@ -53,6 +53,32 @@ const Home = () => {
 
   return (
     <main>
+      {/* Logo Comparison Section - TEMPORAL */}
+      <section className="bg-white py-8 border-b-4 border-emerald-500">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">Selecciona tu logo preferido:</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors cursor-pointer border-2 border-gray-200 hover:border-emerald-500">
+              <img src="/logo1.png" alt="Logo 1" className="h-16 w-auto mb-3" />
+              <span className="text-sm font-medium text-gray-700">Logo 1</span>
+            </div>
+            <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors cursor-pointer border-2 border-gray-200 hover:border-emerald-500">
+              <img src="/logo2.png" alt="Logo 2" className="h-16 w-auto mb-3" />
+              <span className="text-sm font-medium text-gray-700">Logo 2</span>
+            </div>
+            <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors cursor-pointer border-2 border-gray-200 hover:border-emerald-500">
+              <img src="/logo3.png" alt="Logo 3" className="h-16 w-auto mb-3" />
+              <span className="text-sm font-medium text-gray-700">Logo 3</span>
+            </div>
+            <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors cursor-pointer border-2 border-gray-200 hover:border-emerald-500">
+              <img src="/logo4.png" alt="Logo 4" className="h-16 w-auto mb-3" />
+              <span className="text-sm font-medium text-gray-700">Logo 4</span>
+            </div>
+          </div>
+          <p className="text-center mt-4 text-sm text-gray-600">Logo actual: <strong>Logo en el header</strong></p>
+        </div>
+      </section>
+
       {/* Hero Section with Video Background */}
       <section 
         className="relative h-[70vh] md:h-[80vh] overflow-hidden bg-slate-800"
