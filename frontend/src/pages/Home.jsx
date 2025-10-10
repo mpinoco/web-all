@@ -43,6 +43,14 @@ const Home = () => {
     return icons[iconName] || Monitor;
   };
 
+  useEffect(() => {
+    // Force video to play
+    const video = document.querySelector('video');
+    if (video) {
+      video.play().catch(err => console.log('Autoplay prevented:', err));
+    }
+  }, []);
+
   return (
     <main>
       {/* Hero Section with Video Background */}
@@ -58,6 +66,11 @@ const Home = () => {
           playsInline
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
+          ref={(el) => {
+            if (el) {
+              el.play().catch(() => {});
+            }
+          }}
         >
           <source 
             src="/videos/video_intro_allcom.mp4" 
