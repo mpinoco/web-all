@@ -9,14 +9,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-gray-900 font-bold">A</span>
-              </div>
-              <span className="text-xl font-bold">Alcom</span>
+            <div className="mb-4">
+              <img 
+                src="/logo-allcom.png" 
+                alt="ALLCOM" 
+                className="h-8 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-gray-400 text-sm">
-              Tecnología robusta para operar el retail sin fricción. Más de 15 años entregando soluciones de hardware y software.
+              Tecnología para tiendas, sin enredos. Más de 17 años entregando soluciones de hardware y software para retail.
             </p>
           </div>
 
