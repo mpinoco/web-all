@@ -16,11 +16,12 @@ const Header = ({ onOpenAISearch }) => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" data-testid="logo-link">
-            <div className="w-10 h-10 bg-gradient-to-br from-slate-700 to-slate-900 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
-            <span className="text-xl font-bold text-gray-900">Alcom</span>
+          <Link to="/" className="flex items-center" data-testid="logo-link">
+            <img 
+              src="/logo-allcom.png" 
+              alt="ALLCOM" 
+              className="h-8 md:h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
