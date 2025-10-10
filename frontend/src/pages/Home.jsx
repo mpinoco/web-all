@@ -86,10 +86,10 @@ const Home = () => {
         <div className="relative h-full container mx-auto px-4 flex items-center">
           <div className="max-w-4xl fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Humanizando la Tecnología del Autoservicio.
+              Tecnología para tiendas, sin enredos
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl">
-              Amamos el Retail !!, nos encanta que te vaya bien !
+              Buenas Ideas, lindos diseños, Hardware + Software integrados, soporte cercano y cero drama.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button
