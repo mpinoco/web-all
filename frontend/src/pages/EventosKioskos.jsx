@@ -5,6 +5,15 @@ import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
 const EventosKioskos = () => {
+  // Set document title for SEO
+  React.useEffect(() => {
+    document.title = 'Arriendo Kioskos para Eventos | Festivales y Conferencias | ALLCOM';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Arriendo de kioskos de autopago para eventos, festivales, conferencias y eventos masivos en Chile. Instalación rápida, soporte 24/7. +500 eventos realizados.');
+    }
+  }, []);
+
   return (
     <main className="bg-gradient-to-br from-cyan-50 via-teal-50 to-cyan-100">
       {/* Hero Section - Neo Teal with Background Image */}
