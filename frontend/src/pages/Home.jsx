@@ -58,13 +58,9 @@ const Home = () => {
           playsInline
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
-          onError={(e) => {
-            console.log('Video failed to load, using fallback background');
-            e.target.style.display = 'none';
-          }}
         >
           <source 
-            src="https://customer-assets.emergentagent.com/job_ecommerce-liviano/artifacts/6ygqe10q_video_intro_allcom.mp4" 
+            src="/videos/video_intro_allcom.mp4" 
             type="video/mp4" 
           />
           Tu navegador no soporta el tag de video.
