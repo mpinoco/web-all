@@ -7,15 +7,22 @@ import { Card, CardContent } from '../components/ui/card';
 const EventosKioskos = () => {
   return (
     <main className="bg-gradient-to-br from-cyan-50 via-teal-50 to-cyan-100">
-      {/* Hero Section - Neo Teal */}
-      <section className="relative py-20 md:py-32 overflow-hidden bg-gradient-to-br from-[#23C7C2] via-[#1DA89E] to-[#188F8A]">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative container mx-auto px-4">
+      {/* Hero Section - Neo Teal with Background Image */}
+      <section className="relative py-20 md:py-32 overflow-hidden min-h-[80vh] flex items-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: 'url(/evento-hero.jpg)' }}
+        ></div>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#23C7C2]/80 via-[#1DA89E]/75 to-[#188F8A]/80"></div>
+        
+        <div className="relative container mx-auto px-4 z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
               Arriendo de Kioskos para Eventos
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-95">
+            <p className="text-xl md:text-2xl mb-8 opacity-95 drop-shadow-md">
               Soluciones móviles de autoatención para festivales, conferencias y eventos masivos
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -31,7 +38,7 @@ const EventosKioskos = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#23C7C2]"
+                className="border-white text-white hover:bg-white hover:text-[#23C7C2] backdrop-blur-sm"
                 data-testid="eventos-cta-learn"
               >
                 <Link to="#caracteristicas">Ver características</Link>
