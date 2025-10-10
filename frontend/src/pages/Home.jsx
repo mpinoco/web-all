@@ -5,6 +5,7 @@ import { ArrowRight, Scale, Monitor, CreditCard, Smartphone, Truck, ShieldCheck,
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import KPISection from '../components/KPISection';
+import KPIVertical from '../components/KPIVertical';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
