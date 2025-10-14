@@ -87,6 +87,7 @@ function App() {
             <Route path="/productos" element={<Products />} />
             <Route path="/producto/:slug" element={<ProductDetail />} />
             <Route path="/servicios" element={<Services />} />
+            <Route path="/inteligencia-artificial" element={<InteligenciaArtificial />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/cotizacion" element={<QuoteCart />} />
             <Route path="/eventos-kioskos" element={<EventosKioskos />} />
