@@ -89,6 +89,7 @@ function App() {
             <Route path="/eventos-kioskos" element={<EventosKioskos />} />
             <Route path="/aeropuerto-charger" element={<AeropuertoCharger />} />
             <Route path="/alianza-justo" element={<AlianzaJusto />} />
+            <Route path="/alianza-imin" element={<AlianzaIMIN />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
