@@ -49,7 +49,7 @@ const AlianzaWintec = () => {
       category: 'pos',
       categoryLabel: 'Terminal POS All-in-One',
       tagline: 'Potencia y versatilidad para tu negocio',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1654074903.png',
+      image: '/wintec-products/anypos300.png',
       price: 'Desde $750.000 CLP',
       features: [
         'Pantalla táctil 15.6" capacitiva',
