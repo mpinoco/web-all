@@ -24,17 +24,56 @@ import {
   Cog,
   LineChart,
   PieChart,
-  Activity
+  Activity,
+  Lightbulb,
+  Users,
+  DollarSign,
+  Calendar,
+  Clock,
+  AlertCircle,
+  TrendingDown,
+  RefreshCw,
+  FileText
 } from 'lucide-react';
 
 const InteligenciaArtificial = () => {
   const [activeMetric, setActiveMetric] = useState(0);
+  const [currentSuggestion, setCurrentSuggestion] = useState(0);
   const [dashboardData, setDashboardData] = useState({
     sales: 0,
     customers: 0,
     accuracy: 0,
     efficiency: 0
   });
+
+  // 25 AI Suggestions with icons (stored locally, no API)
+  const aiSuggestions = [
+    { icon: TrendingUp, text: 'Aumento de ventas detectado en categoría "Lácteos" (+23%)', color: 'text-[#6EEA6A]' },
+    { icon: AlertCircle, text: 'Stock bajo en "Arroz 1kg". Reposición sugerida: 150 unidades', color: 'text-[#D81B60]' },
+    { icon: Users, text: '45 clientes nuevos esta semana. Aumentar campañas similares', color: 'text-[#0072CE]' },
+    { icon: DollarSign, text: 'Precio competitivo detectado. Ajustar "Aceite" -5% para maximizar', color: 'text-[#23C7C2]' },
+    { icon: Calendar, text: 'Fin de semana largo próximo. Aumentar stock bebidas +40%', color: 'text-[#7A5CFF]' },
+    { icon: Clock, text: 'Hora peak: 18:00-19:30. Asignar 2 cajeros adicionales', color: 'text-[#2D7FF9]' },
+    { icon: TrendingDown, text: 'Baja demanda "Helados". Promoción 2x1 recomendada', color: 'text-[#D81B60]' },
+    { icon: Package, text: 'Productos orgánicos +15% tendencia. Expandir sección', color: 'text-[#6EEA6A]' },
+    { icon: Eye, text: '234 personas vieron "Vino Tinto" pero no compraron. Oferta sugerida', color: 'text-[#7A5CFF]' },
+    { icon: RefreshCw, text: 'Rotación lenta en "Galletas Premium". Reubicación sugerida', color: 'text-[#D81B60]' },
+    { icon: Target, text: 'Cliente frecuente detectado. Cupón 10% personalizado generado', color: 'text-[#23C7C2]' },
+    { icon: BarChart3, text: 'Ventas mes anterior: $2.5M. Proyección mes actual: $2.8M (+12%)', color: 'text-[#6EEA6A]' },
+    { icon: ShoppingCart, text: 'Ticket promedio bajo hoy. Sugerir productos complementarios', color: 'text-[#0072CE]' },
+    { icon: Lightbulb, text: 'Bundle sugerido: "Pan + Jamón + Queso" aumentaría ventas 18%', color: 'text-[#7A5CFF]' },
+    { icon: FileText, text: 'Inventario mensual listo. Revisar 5 discrepancias detectadas', color: 'text-[#D81B60]' },
+    { icon: Users, text: '12 clientes sin comprar hace 30 días. Campaña reactivación lista', color: 'text-[#2D7FF9]' },
+    { icon: TrendingUp, text: 'Categoría "Snacks" creció 34% este trimestre. Ampliar variedad', color: 'text-[#6EEA6A]' },
+    { icon: Clock, text: 'Tiempo promedio en caja: 3.2 min. Optimización disponible', color: 'text-[#23C7C2]' },
+    { icon: DollarSign, text: 'Margen bajo en "Frutas". Ajustar precios +8% sin afectar demanda', color: 'text-[#D81B60]' },
+    { icon: Package, text: 'Proveedor nuevo detectado con precios 12% menores. Contacto sugerido', color: 'text-[#0072CE]' },
+    { icon: Target, text: 'Segmento "Familias" representa 45% ventas. Personalizar ofertas', color: 'text-[#7A5CFF]' },
+    { icon: TrendingDown, text: 'Competidor bajó precios "Leche". Ajuste recomendado -3%', color: 'text-[#D81B60]' },
+    { icon: Sparkles, text: 'Nueva tendencia: Productos sin gluten. Aumentar +25 SKUs', color: 'text-[#6EEA6A]' },
+    { icon: BarChart3, text: 'Conversión web-to-store: 23%. Mejorar con click & collect', color: 'text-[#2D7FF9]' },
+    { icon: MessageSquare, text: '18 consultas WhatsApp sin respuesta. Bot IA puede automatizar', color: 'text-[#23C7C2]' }
+  ];
 
   // Animated dashboard metrics
   useEffect(() => {
@@ -51,32 +90,41 @@ const InteligenciaArtificial = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Rotate AI suggestions every 4 seconds
+  useEffect(() => {
+    const suggestionInterval = setInterval(() => {
+      setCurrentSuggestion(prev => (prev + 1) % aiSuggestions.length);
+    }, 4000);
+
+    return () => clearInterval(suggestionInterval);
+  }, []);
+
   const aiEngines = [
     {
       name: 'Emergent AI',
       logo: 'E',
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-[#7A5CFF] to-[#D81B60]',
       description: 'Plataforma líder en agentes de IA',
       features: ['Agentes Autónomos', 'LLM Multi-modelo', 'Retail First']
     },
     {
       name: 'OpenAI GPT',
       logo: '🤖',
-      color: 'from-green-500 to-teal-500',
+      color: 'from-[#6EEA6A] to-[#23C7C2]',
       description: 'Motor de lenguaje más avanzado',
       features: ['GPT-4 Turbo', 'Visión por IA', 'Code Interpreter']
     },
     {
       name: 'Google AI',
       logo: 'G',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-[#0072CE] to-[#2D7FF9]',
       description: 'Gemini y Vertex AI',
       features: ['Multimodal', 'Cloud Native', 'Enterprise Ready']
     },
     {
       name: 'Banana Dev',
       logo: '🍌',
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-[#6EEA6A] to-[#D81B60]',
       description: 'GPU serverless para ML',
       features: ['Inference Rápida', 'Scale Automático', 'Cost Efectivo']
     }
