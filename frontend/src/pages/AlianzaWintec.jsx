@@ -227,7 +227,7 @@ const AlianzaWintec = () => {
       category: 'scale',
       categoryLabel: 'Scale POS Premium',
       tagline: 'Máxima precisión y rendimiento',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1654158131.png',
+      image: '/wintec-products/acs-s500.png',
       price: 'Desde $1.190.000 CLP',
       features: [
         'Balanza profesional certificada',
