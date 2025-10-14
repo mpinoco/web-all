@@ -158,6 +158,73 @@ frontend:
           - Fully responsive design
           - ALLCOM green color palette throughout
           Initial screenshots taken and page renders correctly.
+      
+      - working: true
+        agent: "main"
+        comment: |
+          MAJOR UPDATE - Implemented all user-requested improvements:
+          
+          1. ✅ Removed stats section (15 years, 100+ countries, 5M devices)
+          
+          2. ✅ Reduced "Why choose IMIN" section by 50%:
+             - Smaller cards (p-6 instead of p-8)
+             - Smaller icons (w-12 h-12 instead of w-16 h-16)
+             - Reduced text sizes (text-lg/text-sm instead of text-xl/text-base)
+             - Less vertical padding (py-12 instead of py-20)
+          
+          3. ✅ Added beautiful category selector with 5 options:
+             - Todos (all products)
+             - Kioscos de Autoservicio
+             - Puntos de Venta
+             - KDS
+             - PDA
+             - Interactive filtering with orange/green hover effects
+             - Shows product count dynamically
+          
+          4. ✅ Added IMIN Crane 1 to product list:
+             - Kiosko Digital Signage
+             - Price: $1,890,000 CLP
+             - Image from IMIN official website
+             - Full features and applications
+          
+          5. ✅ Optimized product containers:
+             - Changed from single column to 2-column grid (md:grid-cols-2)
+             - Reduced padding (p-6 instead of p-8/p-12)
+             - Enlarged product images (w-full instead of max-w-80)
+             - Smaller text throughout (text-2xl/text-sm instead of text-3xl/text-base)
+             - More compact feature lists and applications
+          
+          6. ✅ Updated comparison table:
+             - Changed "Compatibilidad Justo" to "Compatibilidad"
+             - IMIN column now shows: "Justo, Toteat, FUDO"
+             - Competitors shows: "No garantizada"
+          
+          7. ✅ Implemented IMIN color palette (orange) mixed with ALLCOM (green):
+             - Hero: gradient from green-600 via emerald-600 to orange-500
+             - Category selector: orange-500 active state with green-50 to orange-50 gradient
+             - Product cards: orange-400/orange-600 accents
+             - Badges: orange-600 instead of pure green
+             - Feature cards: gradient from green-100 to orange-100, hover from green-600 to orange-500
+             - Buttons: gradient from green-600 to orange-500
+             - Comparison table header: green-600 via emerald-600 to orange-500
+             - Overall alliance colors visible throughout
+          
+          8. ✅ Added PDF download buttons on each product:
+             - "Manual" button (green) - downloads manual PDF
+             - "Specs" button (orange) - downloads specifications PDF
+             - Both buttons with Download and FileText icons
+             - Styled with outline variants matching color scheme
+             - Placed above the main CTA button
+          
+          Total products now: 6 (was 5)
+          All screenshots verified:
+          - New hero with orange gradient ✓
+          - Smaller features section ✓
+          - Category selector working ✓
+          - Filtered view (kioscos) showing K1 and Crane 1 ✓
+          - Updated comparison table with Justo, Toteat, FUDO ✓
+          - Download buttons visible on products ✓
+          - Mobile responsive maintained ✓
 
   - task: "Add IMIN link to Products dropdown menu"
     implemented: true
