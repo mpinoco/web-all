@@ -229,33 +229,33 @@ const AlianzaIMIN = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero Section - IMIN Orange colors */}
-      <section className="relative bg-gradient-to-br from-orange-600 via-orange-500 to-orange-400 text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.2) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(255,255,255,0.2) 0%, transparent 50%)'
-          }}></div>
-        </div>
+      {/* Hero Section - IMIN Background Image */}
+      <section className="relative text-white py-20 overflow-hidden" style={{
+        backgroundImage: 'url(/imin-hero-bg.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="bg-white/20 text-white border-white/30 mb-6 text-sm px-4 py-2">
+            <Badge className="bg-white/30 text-white border-white/40 mb-6 text-sm px-4 py-2 backdrop-blur-sm">
               Alianza Estratégica 2025
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
               ALLCOM + IMIN
             </h1>
-            <p className="text-2xl md:text-3xl mb-4 font-light">
+            <p className="text-2xl md:text-3xl mb-4 font-light drop-shadow-md">
               Tecnología POS de Clase Mundial
             </p>
-            <p className="text-xl mb-8 text-orange-50 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 text-white max-w-2xl mx-auto drop-shadow-md">
               Soluciones Android inteligentes para modernizar tu negocio. 
               Con garantía extendida y soporte local en Chile.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg"
+                className="bg-white text-orange-600 hover:bg-orange-50 px-8 py-6 text-lg shadow-xl"
                 onClick={() => document.getElementById('productos')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Ver Productos <ChevronRight className="ml-2" />
@@ -263,7 +263,7 @@ const AlianzaIMIN = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg"
+                className="border-2 border-white text-white hover:bg-white/20 px-8 py-6 text-lg backdrop-blur-sm shadow-xl"
                 onClick={() => window.open('https://wa.me/56912345678?text=Hola, quiero información sobre IMIN', '_blank')}
               >
                 Solicitar Cotización
