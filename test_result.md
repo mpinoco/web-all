@@ -107,6 +107,16 @@ user_problem_statement: |
   3-year warranty, Justo compatibility, product descriptions, Chilean market applications,
   and example CLP prices. Use ALLCOM's green corporate colors and focus on sales-oriented
   content with easy explanations.
+  
+  UPDATE: User requested multiple improvements:
+  1. Remove stats section (years, devices, countries)
+  2. Reduce "Why choose IMIN" section by 50%
+  3. Add category selector before products (Kioscos, POS, KDS, PDA)
+  4. Add Crane kiosk to product list
+  5. Reduce product container size and enlarge images
+  6. Add Justo, Toteat, FUDO to comparison table
+  7. Mix ALLCOM green with IMIN orange colors throughout
+  8. Add PDF download buttons for manual and specs on each product
 
 backend:
   - task: "Backend infrastructure for IMIN page"
