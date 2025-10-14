@@ -273,6 +273,19 @@ const AlianzaIMIN = () => {
         </div>
       </section>
 
+      {/* IMIN Logo Section */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-center">
+            <img 
+              src="/imin-logo.png" 
+              alt="IMIN Logo" 
+              className="h-16 md:h-20 w-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Alliance Features - IMIN Orange theme */}
       <section className="py-12 bg-gradient-to-b from-white to-orange-50">
         <div className="container mx-auto px-4">
