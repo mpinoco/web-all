@@ -160,7 +160,7 @@ const AlianzaWintec = () => {
       category: 'kiosks',
       categoryLabel: 'Kiosko Compacto',
       tagline: 'Autoservicio en espacios reducidos',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1656568936.png',
+      image: '/wintec-products/selfpos200.png',
       price: 'Desde $1.890.000 CLP',
       features: [
         'Pantalla táctil 15.6"',
