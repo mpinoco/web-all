@@ -16,7 +16,7 @@ const Footer = () => {
                 className="h-8 w-auto brightness-0 invert"
               />
             </div>
-            <p className="text-gray-400 text-sm">
+            <p className="text-emerald-100 text-sm">
               Tecnología para tiendas, sin enredos. Más de 17 años entregando soluciones de hardware y software para retail.
             </p>
           </div>
@@ -25,10 +25,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Productos</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/productos?category=balanzas" className="text-gray-400 hover:text-white transition-colors">Balanzas</Link></li>
-              <li><Link to="/productos?category=kioskos" className="text-gray-400 hover:text-white transition-colors">Kioskos</Link></li>
-              <li><Link to="/productos?category=pos" className="text-gray-400 hover:text-white transition-colors">Terminales POS</Link></li>
-              <li><Link to="/productos?category=pos-moviles" className="text-gray-400 hover:text-white transition-colors">POS Móviles</Link></li>
+              <li><Link to="/productos?category=balanzas" className="text-emerald-100 hover:text-white transition-colors">Balanzas</Link></li>
+              <li><Link to="/productos?category=kioskos" className="text-emerald-100 hover:text-white transition-colors">Kioskos</Link></li>
+              <li><Link to="/productos?category=pos" className="text-emerald-100 hover:text-white transition-colors">Terminales POS</Link></li>
+              <li><Link to="/productos?category=pos-moviles" className="text-emerald-100 hover:text-white transition-colors">POS Móviles</Link></li>
             </ul>
           </div>
 
@@ -36,10 +36,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Empresa</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/servicios" className="text-gray-400 hover:text-white transition-colors">Servicios</Link></li>
-              <li><Link to="/contacto" className="text-gray-400 hover:text-white transition-colors">Contacto</Link></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Casos de Éxito</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><Link to="/servicios" className="text-emerald-100 hover:text-white transition-colors">Servicios</Link></li>
+              <li><Link to="/contacto" className="text-emerald-100 hover:text-white transition-colors">Contacto</Link></li>
+              <li><a href="#" className="text-emerald-100 hover:text-white transition-colors">Casos de Éxito</a></li>
+              <li><a href="#" className="text-emerald-100 hover:text-white transition-colors">Blog</a></li>
             </ul>
           </div>
 
@@ -49,21 +49,21 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <Phone className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">+56 2 1234 5678</span>
+                <span className="text-emerald-100">+56 2 1234 5678</span>
               </li>
               <li className="flex items-start space-x-2">
                 <Mail className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">ventas@alcom.cl</span>
+                <span className="text-emerald-100">ventas@alcom.cl</span>
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">Santiago, Chile</span>
+                <span className="text-emerald-100">Santiago, Chile</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-emerald-600 mt-8 pt-8 text-center text-sm text-emerald-100">
           <p>&copy; {new Date().getFullYear()} Alcom. Todos los derechos reservados.</p>
           <div className="mt-2 space-x-4">
             <a href="#" className="hover:text-white transition-colors">Privacidad</a>
