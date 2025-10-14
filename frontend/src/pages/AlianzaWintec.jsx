@@ -138,7 +138,7 @@ const AlianzaWintec = () => {
       category: 'kiosks',
       categoryLabel: 'Kiosko Autoservicio Premium',
       tagline: 'Autoservicio inteligente de última generación',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1697687100.png',
+      image: '/wintec-products/selfpos70.png',
       price: 'Desde $2.490.000 CLP',
       features: [
         'Pantalla táctil 21.5" o 27"',
