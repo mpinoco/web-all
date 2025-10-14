@@ -182,7 +182,7 @@ const AlianzaWintec = () => {
       category: 'kiosks',
       categoryLabel: 'Kiosko Modular',
       tagline: 'Flexibilidad y personalización',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1656576482.png',
+      image: '/wintec-products/selfpos10.png',
       price: 'Desde $1.690.000 CLP',
       features: [
         'Diseño modular personalizable',
