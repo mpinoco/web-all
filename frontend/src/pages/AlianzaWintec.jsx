@@ -273,7 +273,7 @@ const AlianzaWintec = () => {
       category: 'signage',
       categoryLabel: 'Pantallas Señalización Digital',
       tagline: 'Comunicación visual impactante',
-      image: 'https://via.placeholder.com/400x400/001F3F/FFFFFF?text=Digital+Signage',
+      image: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"%3E%3Crect fill="%23001F3F" width="400" height="400"/%3E%3Ctext x="50%25" y="35%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="28" fill="white" font-weight="bold"%3EDigital Signage%3C/text%3E%3Crect x="80" y="150" width="240" height="180" rx="12" fill="white" opacity="0.3"/%3E%3Crect x="90" y="160" width="220" height="140" rx="8" fill="white"/%3E%3Crect x="185" y="315" width="30" height="40" fill="white" opacity="0.5"/%3E%3Crect x="140" y="355" width="120" height="20" rx="10" fill="white" opacity="0.5"/%3E%3C/svg%3E',
       price: 'Consultar',
       features: [
         'Pantallas de 32" a 86"',
