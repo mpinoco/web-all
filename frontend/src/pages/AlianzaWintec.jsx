@@ -205,7 +205,7 @@ const AlianzaWintec = () => {
       category: 'scale',
       categoryLabel: 'POS con Balanza Integrada',
       tagline: 'Perfecto para comercio de alimentos',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1654055033.png',
+      image: '/wintec-products/acs-s100.png',
       price: 'Desde $890.000 CLP',
       features: [
         'Balanza de alta precisión',
