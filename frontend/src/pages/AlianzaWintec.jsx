@@ -93,7 +93,7 @@ const AlianzaWintec = () => {
       category: 'pos',
       categoryLabel: 'POS Premium Dual Screen',
       tagline: 'Doble pantalla para máxima eficiencia',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1728547647.png',
+      image: '/wintec-products/anypos600.png',
       price: 'Desde $1.290.000 CLP',
       features: [
         'Doble pantalla 15.6" + 15.6"',
