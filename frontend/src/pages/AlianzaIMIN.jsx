@@ -18,19 +18,22 @@ import {
   Smartphone,
   Coffee,
   Plane,
-  ShoppingCart
+  ShoppingCart,
+  Package,
+  MonitorPlay,
+  CreditCard
 } from 'lucide-react';
 
 const AlianzaIMIN = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  // Categories for filtering
+  // Categories for filtering with updated icons
   const categories = [
     { id: 'all', label: 'Todos', icon: Monitor },
-    { id: 'kioscos', label: 'Kioscos de Autoservicio', icon: Monitor },
-    { id: 'pos', label: 'Puntos de Venta', icon: Store },
-    { id: 'kds', label: 'KDS', icon: Laptop },
+    { id: 'kioscos', label: 'Kioscos de Autoservicio', icon: Package }, // Kiosko con base de piso
+    { id: 'pos', label: 'Puntos de Venta', icon: CreditCard }, // Máquina registradora
+    { id: 'kds', label: 'KDS', icon: MonitorPlay }, // Pantalla touch
     { id: 'pda', label: 'PDA', icon: Smartphone }
   ];
 
