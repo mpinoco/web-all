@@ -250,7 +250,7 @@ const AlianzaWintec = () => {
       category: 'esl',
       categoryLabel: 'Sistema de Etiquetas Electrónicas',
       tagline: 'Actualización de precios en tiempo real',
-      image: 'https://via.placeholder.com/400x400/001F3F/FFFFFF?text=ESL+System',
+      image: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"%3E%3Crect fill="%23001F3F" width="400" height="400"/%3E%3Ctext x="50%25" y="45%25" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="32" fill="white" font-weight="bold"%3EESL System%3C/text%3E%3Crect x="100" y="200" width="200" height="80" rx="8" fill="white" opacity="0.3"/%3E%3Crect x="110" y="210" width="60" height="20" rx="4" fill="white"/%3E%3Crect x="110" y="240" width="180" height="30" rx="4" fill="white"/%3E%3C/svg%3E',
       price: 'Consultar',
       features: [
         'Actualización inalámbrica de precios',
