@@ -115,7 +115,7 @@ const AlianzaWintec = () => {
       category: 'pos',
       categoryLabel: 'Terminal POS Móvil',
       tagline: 'Movilidad y potencia juntas',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1750726548.png',
+      image: '/wintec-products/npos60.png',
       price: 'Desde $620.000 CLP',
       features: [
         'Pantalla táctil 6" portátil',
