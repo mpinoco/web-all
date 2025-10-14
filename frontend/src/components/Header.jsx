@@ -61,6 +61,14 @@ const Header = ({ onOpenAISearch }) => {
                     <div className="font-medium">Alianza IMIN</div>
                     <div className="text-xs text-gray-500">POS y Kioscos Android</div>
                   </Link>
+                  <Link
+                    to="/alianza-wintec"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border-l-2 border-transparent hover:border-blue-500"
+                    data-testid="nav-wintec"
+                  >
+                    <div className="font-medium">Alianza Wintec</div>
+                    <div className="text-xs text-gray-500">Soluciones POS Globales</div>
+                  </Link>
                 </div>
               </div>
             </div>
