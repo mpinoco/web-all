@@ -71,7 +71,7 @@ const AlianzaWintec = () => {
       category: 'pos',
       categoryLabel: 'Terminal POS Compacto',
       tagline: 'Solución eficiente para espacios reducidos',
-      image: 'https://www.wintec.co/uploads/images/product/thumb/1654157534.png',
+      image: '/wintec-products/anypos100.png',
       price: 'Desde $580.000 CLP',
       features: [
         'Pantalla táctil 10.1" o 15.6"',
