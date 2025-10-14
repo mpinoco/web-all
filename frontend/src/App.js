@@ -10,6 +10,7 @@ import QuoteCart from './pages/QuoteCart';
 import EventosKioskos from './pages/EventosKioskos';
 import AeropuertoCharger from './pages/AeropuertoCharger';
 import AlianzaJusto from './pages/AlianzaJusto';
+import AlianzaIMIN from './pages/AlianzaIMIN';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
