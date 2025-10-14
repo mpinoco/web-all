@@ -93,6 +93,7 @@ function App() {
             <Route path="/alianza-justo" element={<AlianzaJusto />} />
             <Route path="/alianza-imin" element={<AlianzaIMIN />} />
             <Route path="/alianza-wintec" element={<AlianzaWintec />} />
+            <Route path="/alianza-marques" element={<AlianzaMarques />} />
           </Routes>
           <Footer />
           <WhatsAppButton />
