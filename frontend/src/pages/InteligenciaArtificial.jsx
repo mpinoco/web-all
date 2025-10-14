@@ -97,8 +97,13 @@ const InteligenciaArtificial = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      {/* Hero - Reduced 25% */}
-      <section className="relative bg-gradient-to-br from-[#7A5CFF] via-[#D81B60] to-[#0072CE] text-white py-16 overflow-hidden">
+      {/* Hero - With background image */}
+      <section className="relative text-white py-16 overflow-hidden" style={{
+        backgroundImage: 'linear-gradient(135deg, rgba(122, 92, 255, 0.95) 0%, rgba(216, 27, 96, 0.9) 50%, rgba(0, 114, 206, 0.95) 100%), url(https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1920&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlend: 'overlay'
+      }}>
         <div className="absolute inset-0 opacity-20 animate-pulse" style={{
           backgroundImage: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.3) 0%, transparent 50%)'
         }}></div>
