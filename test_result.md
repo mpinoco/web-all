@@ -312,3 +312,62 @@ agent_communication:
       
       Ready for comprehensive frontend testing to verify all interactions,
       links, and responsive behavior.
+  
+  - agent: "main"
+    message: |
+      IMIN ALLIANCE PAGE - ALL 8 USER IMPROVEMENTS COMPLETED! ✅
+      
+      Successfully implemented ALL requested changes:
+      
+      1. ❌ REMOVED stats section completely (no more 15 years, 100+ countries, etc.)
+      
+      2. 📏 REDUCED "Why choose IMIN" section by 50%:
+         - Smaller cards, icons, text
+         - Less padding and spacing
+         - More compact layout
+      
+      3. 🎯 ADDED interactive category selector:
+         - 5 categories: Todos, Kioscos, POS, KDS, PDA
+         - Beautiful orange/green active states
+         - Dynamic product count
+         - Smooth filtering
+      
+      4. ➕ ADDED IMIN Crane 1 kiosk:
+         - Digital Signage category
+         - $1,890,000 CLP
+         - Full specs and images
+      
+      5. 📐 OPTIMIZED product display:
+         - 2-column grid layout
+         - Larger product images
+         - More compact containers
+         - Better use of space
+      
+      6. ✅ UPDATED comparison table:
+         - Now shows "Justo, Toteat, FUDO"
+         - Highlights all compatible platforms
+      
+      7. 🎨 MIXED ALLCOM + IMIN colors:
+         - Green + Orange gradients throughout
+         - Hero: green→emerald→orange
+         - Buttons: green to orange gradient
+         - Cards: green/orange mix
+         - True alliance branding!
+      
+      8. 📥 ADDED PDF download buttons:
+         - Manual button (green)
+         - Specs button (orange)
+         - On every product card
+      
+      TOTAL: 6 products now (was 5)
+      
+      All verified with screenshots:
+      ✓ Orange gradient hero
+      ✓ Compact features section
+      ✓ Working category selector
+      ✓ K1 & Crane 1 in kioscos filter
+      ✓ Justo, Toteat, FUDO in comparison
+      ✓ Download buttons on products
+      ✓ Mobile responsive
+      
+      Page is ready for user review!
