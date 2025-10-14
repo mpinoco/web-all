@@ -35,15 +35,35 @@ const Header = ({ onOpenAISearch }) => {
             >
               Inicio
             </Link>
-            <Link
-              to="/productos"
-              data-testid="nav-products"
-              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
-                isActive('/productos') ? 'text-emerald-700' : 'text-gray-600'
-              }`}
-            >
-              Productos
-            </Link>
+            {/* Productos Dropdown */}
+            <div className="relative group">
+              <button className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors flex items-center">
+                Productos
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link
+                    to="/productos"
+                    data-testid="nav-products"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors border-l-2 border-transparent hover:border-emerald-500"
+                  >
+                    <div className="font-medium">Catálogo Completo</div>
+                    <div className="text-xs text-gray-500">Todos nuestros productos</div>
+                  </Link>
+                  <Link
+                    to="/alianza-imin"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors border-l-2 border-transparent hover:border-green-500"
+                    data-testid="nav-imin"
+                  >
+                    <div className="font-medium">Alianza IMIN</div>
+                    <div className="text-xs text-gray-500">POS y Kioscos Android</div>
+                  </Link>
+                </div>
+              </div>
+            </div>
             
             {/* Soluciones Dropdown */}
             <div className="relative group">
