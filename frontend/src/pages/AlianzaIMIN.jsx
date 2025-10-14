@@ -17,11 +17,24 @@ import {
   Award,
   Clock,
   Settings,
-  ChevronRight
+  ChevronRight,
+  Download,
+  FileText,
+  Laptop
 } from 'lucide-react';
 
 const AlianzaIMIN = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  // Categories for filtering
+  const categories = [
+    { id: 'all', label: 'Todos', icon: Monitor },
+    { id: 'kioscos', label: 'Kioscos de Autoservicio', icon: Monitor },
+    { id: 'pos', label: 'Puntos de Venta', icon: Store },
+    { id: 'kds', label: 'KDS', icon: Laptop },
+    { id: 'pda', label: 'PDA', icon: Smartphone }
+  ];
 
   // Top 5 IMIN Products for Chilean Market
   const products = [
