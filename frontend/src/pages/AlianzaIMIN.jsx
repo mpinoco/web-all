@@ -207,11 +207,20 @@ const AlianzaIMIN = () => {
   ];
 
   const comparisonTable = [
-    { feature: 'Garantía', imin: '3 años', competitors: '1 año' },
-    { feature: 'Soporte Local', imin: 'Sí, Chile', competitors: 'Limitado' },
-    { feature: 'Compatibilidad', imin: 'Justo, Toteat, FUDO', competitors: 'No garantizada' },
-    { feature: 'Actualizaciones', imin: 'Gratuitas', competitors: 'De pago' },
-    { feature: 'Tiempo respuesta', imin: '24-48h', competitors: '5-7 días' }
+    { feature: 'Garantía', allcom: '3 años incluida', competitors: '1 año' },
+    { feature: 'Instalación', allcom: 'Incluida en terreno', competitors: 'Costo adicional' },
+    { feature: 'Soporte Local', allcom: 'Incluido, Chile 24/7', competitors: 'Limitado' },
+    { feature: 'Compatibilidad', allcom: 'Justo, Toteat, FUDO', competitors: 'No garantizada' },
+    { feature: 'Actualizaciones', allcom: 'Gratuitas', competitors: 'De pago' },
+    { feature: 'Tiempo respuesta', allcom: '24-48h', competitors: '5-7 días' }
+  ];
+
+  // Crane 1 configurations
+  const craneConfigurations = [
+    { name: 'Table Stand', sizes: '16", 21.5", 27"', image: 'https://www.imin.com/wp-content/uploads/2025/07/crane-1@2x.webp' },
+    { name: 'Floor Stand', sizes: '21.5", 27", 32"', image: 'https://www.imin.com/wp-content/uploads/2025/07/crane-1@2x.webp' },
+    { name: 'Cashier Stand', sizes: '16"', image: 'https://www.imin.com/wp-content/uploads/2025/07/crane-1@2x.webp' },
+    { name: 'Retail Stand', sizes: '16"', image: 'https://www.imin.com/wp-content/uploads/2025/07/crane-1@2x.webp' }
   ];
 
   const filteredProducts = selectedCategory === 'all' 
