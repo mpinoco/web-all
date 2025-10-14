@@ -36,12 +36,13 @@ const AlianzaIMIN = () => {
     { id: 'pda', label: 'PDA', icon: Smartphone }
   ];
 
-  // Top 5 IMIN Products for Chilean Market
+  // IMIN Products for Chilean Market
   const products = [
     {
       id: 1,
       name: 'IMIN Falcon 2 Max',
-      category: 'Tablet POS',
+      category: 'pos',
+      categoryLabel: 'Tablet POS',
       tagline: 'El POS portátil más potente',
       image: 'https://www.imin.com/wp-content/uploads/2025/07/falcon-2-max@2x.webp',
       price: 'Desde $890.000 CLP',
@@ -63,7 +64,8 @@ const AlianzaIMIN = () => {
     {
       id: 2,
       name: 'IMIN Swan 2',
-      category: 'Desktop POS',
+      category: 'pos',
+      categoryLabel: 'Desktop POS',
       tagline: 'Elegancia y rendimiento en un solo equipo',
       image: 'https://www.imin.com/wp-content/uploads/2025/07/swan-2@2x.webp',
       price: 'Desde $1.250.000 CLP',
@@ -85,10 +87,96 @@ const AlianzaIMIN = () => {
     {
       id: 3,
       name: 'IMIN D4 Pro',
-      category: 'Desktop POS Premium',
+      category: 'pos',
+      categoryLabel: 'Desktop POS Premium',
       tagline: 'Potencia profesional con IA integrada',
       image: 'https://www.imin.com/wp-content/uploads/2025/07/D4-Pro@2x.webp',
       price: 'Desde $1.690.000 CLP',
+      features: [
+        'Procesador Dual-Core A78 2.2GHz',
+        'Hasta 8GB RAM + 128GB ROM',
+        'Pantalla FHD 15.6" táctil',
+        'IA para análisis de negocio',
+        'Impresora térmica de alta velocidad',
+        'Android 13'
+      ],
+      applications: [
+        { icon: Store, text: 'Grandes cadenas retail' },
+        { icon: Plane, text: 'Hotelería y turismo' },
+        { icon: ShoppingCart, text: 'E-commerce con punto físico' }
+      ],
+      badge: 'PREMIUM'
+    },
+    {
+      id: 4,
+      name: 'IMIN Swift 2 Pro',
+      category: 'pda',
+      categoryLabel: 'Mobile POS / PDA',
+      tagline: 'Movilidad sin compromisos',
+      image: 'https://www.imin.com/wp-content/uploads/2025/07/swift-2-Pro@2x.webp',
+      price: 'Desde $650.000 CLP',
+      features: [
+        'Ultra compacto y liviano',
+        'Pantalla táctil 5.5" HD',
+        'Impresora térmica 58mm',
+        'Escáner de código de barras',
+        'NFC contactless',
+        'Batería removible'
+      ],
+      applications: [
+        { icon: Coffee, text: 'Delivery y domicilio' },
+        { icon: Store, text: 'Ventas ambulantes' },
+        { icon: ShoppingCart, text: 'Eventos y ferias' }
+      ],
+      badge: 'COMPACTO'
+    },
+    {
+      id: 5,
+      name: 'IMIN K1',
+      category: 'kioscos',
+      categoryLabel: 'Kiosko Interactivo',
+      tagline: 'Autoservicio inteligente',
+      image: 'https://www.imin.com/wp-content/uploads/2025/04/imin-product-featured-new-K12x-1024x1024.png',
+      price: 'Desde $2.100.000 CLP',
+      features: [
+        'Pantalla táctil 21.5" Full HD',
+        'Sistema de pago integrado',
+        'Impresora de tickets',
+        'Diseño robusto anti-vandálico',
+        'Opciones de personalización',
+        'Software de gestión incluido'
+      ],
+      applications: [
+        { icon: Plane, text: 'Aeropuertos y terminales' },
+        { icon: Store, text: 'Centros comerciales' },
+        { icon: Coffee, text: 'Fast food y QSR' }
+      ],
+      badge: 'AUTOSERVICIO'
+    },
+    {
+      id: 6,
+      name: 'IMIN Crane 1',
+      category: 'kioscos',
+      categoryLabel: 'Kiosko Digital Signage',
+      tagline: 'Señalización digital interactiva',
+      image: 'https://www.imin.com/wp-content/uploads/2025/07/crane-1@2x.webp',
+      price: 'Desde $1.890.000 CLP',
+      features: [
+        'Pantalla táctil de gran formato',
+        'Android 11 con alto rendimiento',
+        'Múltiples opciones de conectividad',
+        'Gestión remota de contenidos',
+        'Diseño elegante y moderno',
+        'Soporte para aplicaciones personalizadas'
+      ],
+      applications: [
+        { icon: Store, text: 'Centros comerciales' },
+        { icon: Plane, text: 'Hoteles y turismo' },
+        { icon: Coffee, text: 'Restaurantes modernos' }
+      ],
+      badge: 'INTERACTIVO'
+    }
+  ];
       features: [
         'Procesador Dual-Core A78 2.2GHz',
         'Hasta 8GB RAM + 128GB ROM',
