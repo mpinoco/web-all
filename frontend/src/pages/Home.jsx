@@ -213,6 +213,338 @@ const Home = () => {
         </div>
       </section>
 
+      {/* SECCIÓN 3 – CONFIGURADOR INTELIGENTE (IA interactiva) */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-10 left-10 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+          <div className="absolute top-10 right-10 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
+              <Sparkles className="w-5 h-5 text-purple-600" />
+              <span className="text-sm font-semibold text-purple-900">Inteligencia Artificial</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Descubre tu ecosistema ideal
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Nuestra IA te ayuda a encontrar la solución perfecta para tu negocio
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-8 md:p-12 border border-white/50">
+              {/* Step 1: Environment Selection */}
+              <div className="mb-8">
+                <label className="block text-lg font-semibold text-gray-900 mb-4">
+                  1. Selecciona tu entorno:
+                </label>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {['Retail', 'Minería', 'Banca', 'Ciudad'].map((env) => (
+                    <button
+                      key={env}
+                      onClick={() => setSelectedEnvironment(env)}
+                      className={`p-4 rounded-xl border-2 transition-all transform hover:scale-105 ${
+                        selectedEnvironment === env
+                          ? 'border-purple-600 bg-purple-50 shadow-lg'
+                          : 'border-gray-200 bg-white hover:border-purple-300'
+                      }`}
+                    >
+                      <div className="text-3xl mb-2">
+                        {env === 'Retail' && '🛒'}
+                        {env === 'Minería' && '⛏️'}
+                        {env === 'Banca' && '🏦'}
+                        {env === 'Ciudad' && '🌆'}
+                      </div>
+                      <div className="text-sm font-medium text-gray-900">{env}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Step 2: Goal Selection */}
+              <div className="mb-8">
+                <label className="block text-lg font-semibold text-gray-900 mb-4">
+                  2. ¿Cuál es tu objetivo?
+                </label>
+                <div className="grid md:grid-cols-3 gap-4">
+                  {['Reducir tiempos', 'Automatizar', 'Mejorar atención'].map((goal) => (
+                    <button
+                      key={goal}
+                      onClick={() => setSelectedGoal(goal)}
+                      className={`p-6 rounded-xl border-2 transition-all transform hover:scale-105 ${
+                        selectedGoal === goal
+                          ? 'border-blue-600 bg-blue-50 shadow-lg'
+                          : 'border-gray-200 bg-white hover:border-blue-300'
+                      }`}
+                    >
+                      <div className="font-semibold text-gray-900">{goal}</div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Submit Button */}
+              <div className="text-center">
+                <button
+                  onClick={handleConfiguratorSubmit}
+                  disabled={!selectedEnvironment || !selectedGoal}
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-xl flex items-center gap-3 mx-auto"
+                >
+                  <Sparkles className="w-6 h-6" />
+                  Generar Recomendación IA
+                  <ArrowRight className="w-6 h-6" />
+                </button>
+              </div>
+
+              {/* AI Result */}
+              {showDemo && (
+                <div id="ai-result" className="mt-8 p-6 bg-gradient-to-r from-purple-100 to-blue-100 rounded-2xl border-2 border-purple-300 animate-fade-in">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Sparkles className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        Tu solución ideal es:
+                      </h3>
+                      <p className="text-2xl font-bold text-purple-900 mb-4">
+                        {aiSuggestion}
+                      </p>
+                      <div className="flex gap-3">
+                        <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all shadow-md">
+                          Ver Demo
+                        </button>
+                        <button className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-all shadow-md">
+                          Solicitar Cotización
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 4 – DATOS EN VIVO (Ecosistema funcionando) */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        {/* Animated Connection Lines */}
+        <div className="absolute inset-0 opacity-20">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M0,50 Q25,30 50,50 T100,50" stroke="currentColor" strokeWidth="0.5" fill="none" className="animate-pulse" />
+            <path d="M0,60 Q25,40 50,60 T100,60" stroke="currentColor" strokeWidth="0.5" fill="none" className="animate-pulse" style={{animationDelay: '1s'}} />
+          </svg>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-4">
+              <Activity className="w-5 h-5 text-cyan-400" />
+              <span className="text-sm font-semibold text-cyan-300">En Tiempo Real</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Nuestra tecnología en acción
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Métricas en vivo de nuestro ecosistema global
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Metric 1 */}
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all border border-white/20">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-5xl font-bold text-cyan-400 mb-2 font-mono">
+                  {equiposActivos.toLocaleString()}+
+                </div>
+                <div className="text-sm text-gray-300 font-medium">Equipos Activos</div>
+                <div className="mt-2 flex items-center justify-center gap-2 text-green-400 text-xs">
+                  <TrendingUp className="w-4 h-4" />
+                  <span>+3 en últimos 5min</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Metric 2 */}
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all border border-white/20">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                  <Activity className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-5xl font-bold text-purple-400 mb-2 font-mono">
+                  {interaccionesHoy.toLocaleString()}+
+                </div>
+                <div className="text-sm text-gray-300 font-medium">Interacciones Hoy</div>
+                <div className="mt-2 flex items-center justify-center gap-2 text-green-400 text-xs">
+                  <Zap className="w-4 h-4" />
+                  <span>Actualizando...</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Metric 3 */}
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all border border-white/20">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-5xl font-bold text-green-400 mb-2 font-mono">
+                  {reduccionTiempo.toFixed(1)}%
+                </div>
+                <div className="text-sm text-gray-300 font-medium">Menos Tiempo de Espera</div>
+                <div className="mt-2 flex items-center justify-center gap-2 text-green-400 text-xs">
+                  <Activity className="w-4 h-4 animate-pulse" />
+                  <span>Mejorando</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Metric 4 */}
+            <div className="text-center group">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all border border-white/20">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                  <Globe className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-5xl font-bold text-orange-400 mb-2 font-mono">
+                  12
+                </div>
+                <div className="text-sm text-gray-300 font-medium">Países Conectados</div>
+                <div className="mt-2 flex items-center justify-center gap-2 text-blue-400 text-xs">
+                  <Shield Check className="w-4 h-4" />
+                  <span>100% Uptime</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Connection Pulse Effect */}
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-3 text-cyan-400">
+              <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
+              <span className="text-sm font-medium">Sistema sincronizado en tiempo real</span>
+              <div className="w-3 h-3 bg-cyan-400 rounded-full animate-ping"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECCIÓN 5 – GALERÍA INTERACTIVA DE PRODUCTOS (IA visual) */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-blue-100 px-6 py-2 rounded-full mb-4">
+              <Eye className="w-5 h-5 text-blue-600" />
+              <span className="text-sm font-semibold text-blue-900">Visualización IA</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Galería Interactiva de Productos
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+              Explora nuestros equipos con etiquetas inteligentes y contextos personalizados
+            </p>
+
+            {/* Context Switcher */}
+            <div className="flex justify-center gap-4 mb-12">
+              {[
+                { id: 'retail', label: 'Ver en Retail', icon: '🛒' },
+                { id: 'mineria', label: 'Ver en Minería', icon: '⛏️' },
+                { id: 'banca', label: 'Ver en Banca', icon: '🏦' }
+              ].map((context) => (
+                <button
+                  key={context.id}
+                  onClick={() => setGalleryContext(context.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 ${
+                    galleryContext === context.id
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-300'
+                  }`}
+                >
+                  <span className="mr-2">{context.icon}</span>
+                  {context.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Products Grid */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'IM Station',
+                image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500&h=500&fit=crop',
+                tags: ['Pantalla táctil IA', 'Lector QR', 'Sistema Android']
+              },
+              {
+                name: 'Balanza Inteligente',
+                image: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=500&h=500&fit=crop',
+                tags: ['Pesaje Automático', 'Conexión IoT', 'Impresora Térmica']
+              },
+              {
+                name: 'Terminal POS',
+                image: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=500&h=500&fit=crop',
+                tags: ['Reconocimiento Facial', 'POS Integrado', 'Pago Contactless']
+              }
+            ].map((product, idx) => (
+              <div
+                key={idx}
+                className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all transform hover:-translate-y-2 cursor-pointer"
+                onMouseEnter={() => setSelectedProduct(idx)}
+                onMouseLeave={() => setSelectedProduct(null)}
+              >
+                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  {/* Context Badge */}
+                  <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    {galleryContext === 'retail' && '🛒 Retail'}
+                    {galleryContext === 'mineria' && '⛏️ Minería'}
+                    {galleryContext === 'banca' && '🏦 Banca'}
+                  </div>
+                  
+                  {/* Smart Tags - Show on Hover */}
+                  {selectedProduct === idx && (
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm p-4 flex flex-col justify-center gap-2 animate-fade-in">
+                      {product.tags.map((tag, tagIdx) => (
+                        <div
+                          key={tagIdx}
+                          className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg text-sm font-semibold text-gray-900 shadow-lg animate-slide-in"
+                          style={{ animationDelay: `${tagIdx * 100}ms` }}
+                        >
+                          <span className="text-blue-600 mr-2">✓</span>
+                          {tag}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Adaptado para {galleryContext === 'retail' ? 'tiendas y supermercados' : galleryContext === 'mineria' ? 'operaciones industriales' : 'sucursales bancarias'}
+                  </p>
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
+                    Ver Detalles
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Main KPI Section - Full 6 indicators */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700">
         <KPISection variant="main" />
