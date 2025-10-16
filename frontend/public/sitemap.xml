@@ -64,6 +64,13 @@
     <priority>1.0</priority>
   </url>
 
+  <url>
+    <loc>https://allcom.cl/team</loc>
+    <lastmod>2025-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Soluciones -->
   <url>
     <loc>https://allcom.cl/eventos-kioskos</loc>
