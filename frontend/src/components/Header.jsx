@@ -238,6 +238,7 @@ const Header = ({ onOpenAISearch }) => {
               {/* Soluciones Section */}
               <div className="border-l-2 border-cyan-500 pl-3">
                 <div className="text-xs font-semibold text-cyan-700 mb-2">SOLUCIONES</div>
+                <Link to="/plataformas-servidores" className="block text-sm font-medium text-gray-600 hover:text-slate-900 mb-2">Plataformas / Servidores</Link>
                 <Link to="/eventos-kioskos" className="block text-sm font-medium text-gray-600 hover:text-slate-900 mb-2">Arriendo Kioskos Eventos</Link>
                 <Link to="/aeropuerto-charger" className="block text-sm font-medium text-gray-600 hover:text-slate-900 mb-2">Cargadores Aeropuertos</Link>
                 <Link to="/alianza-justo" className="block text-sm font-medium text-gray-600 hover:text-slate-900 mb-2">Software POS Restaurantes</Link>
