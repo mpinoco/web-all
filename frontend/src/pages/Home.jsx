@@ -15,6 +15,21 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const Home = () => {
   const [categories, setCategories] = useState([]);
   const [services, setServices] = useState([]);
+  
+  // AI Configurator States
+  const [selectedEnvironment, setSelectedEnvironment] = useState('');
+  const [selectedGoal, setSelectedGoal] = useState('');
+  const [aiSuggestion, setAiSuggestion] = useState('');
+  const [showDemo, setShowDemo] = useState(false);
+  
+  // Live Metrics States
+  const [equiposActivos, setEquiposActivos] = useState(1000);
+  const [interaccionesHoy, setInteraccionesHoy] = useState(35000);
+  const [reduccionTiempo, setReduccionTiempo] = useState(30);
+  
+  // Gallery States
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [galleryContext, setGalleryContext] = useState('retail');
 
   useEffect(() => {
     const fetchData = async () => {
