@@ -14,21 +14,21 @@ const ProductsMenuVisual = () => {
     {
       title: 'Kioskos de Autopago',
       description: 'Autoatención rápida para reducir filas',
-      image: 'https://images.unsplash.com/photo-1687969962129-dd77e13b95b7?w=800',
+      image: 'https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=800&q=80',
       link: '/productos?category=kioskos',
       gradient: 'from-blue-900/70 via-cyan-800/60 to-teal-900/70'
     },
     {
       title: 'Puntos de Venta',
       description: 'Terminales POS robustos para alto tráfico',
-      image: 'https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=800',
+      image: 'https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?w=800&q=80',
       link: '/productos?category=pos',
       gradient: 'from-emerald-900/70 via-teal-800/60 to-cyan-900/70'
     },
     {
       title: 'POS Móviles',
       description: 'Soluciones de pago móvil y portátil',
-      image: 'https://images.unsplash.com/photo-1726065235203-4368c41c6f19?w=800',
+      image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80',
       link: '/productos?category=pos-moviles',
       gradient: 'from-slate-900/70 via-emerald-800/60 to-teal-900/70'
     }
