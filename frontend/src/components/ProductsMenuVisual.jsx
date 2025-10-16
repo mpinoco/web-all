@@ -7,7 +7,7 @@ const ProductsMenuVisual = () => {
     {
       title: 'Balanzas Inteligentes',
       description: 'Precisión y conectividad para comercio retail',
-      image: 'https://images.unsplash.com/photo-1612012060851-20f943c02d3d?w=800',
+      image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80',
       link: '/productos?category=balanzas',
       gradient: 'from-slate-900/70 via-slate-800/60 to-emerald-900/70'
     },
