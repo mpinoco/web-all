@@ -86,8 +86,8 @@ function App() {
         <BrowserRouter>
           <Header onOpenAISearch={() => setShowAISearch(true)} />
           <Routes>
-            <Route path="/" element={<HomeNew />} />
-            <Route path="/home-old" element={<Home />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/home-new" element={<HomeNew />} />
             
             {/* Ecosistemas Routes */}
             <Route path="/ecosistema-retail" element={<Home />} />
