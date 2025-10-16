@@ -91,6 +91,7 @@ function App() {
             <Route path="/servicios" element={<Services />} />
             <Route path="/inteligencia-artificial" element={<InteligenciaArtificial />} />
             <Route path="/team" element={<Team />} />
+            <Route path="/plataformas-servidores" element={<PlataformasServidores />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/cotizacion" element={<QuoteCart />} />
             <Route path="/eventos-kioskos" element={<EventosKioskos />} />
