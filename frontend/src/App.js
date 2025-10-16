@@ -86,7 +86,22 @@ function App() {
         <BrowserRouter>
           <Header onOpenAISearch={() => setShowAISearch(true)} />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomeNew />} />
+            <Route path="/home-old" element={<Home />} />
+            
+            {/* Ecosistemas Routes */}
+            <Route path="/ecosistema-retail" element={<Home />} />
+            <Route path="/ecosistema-banca" element={<Home />} />
+            <Route path="/ecosistema-industria" element={<PlataformasServidores />} />
+            <Route path="/ecosistema-smart-city" element={<Home />} />
+            <Route path="/ecosistema-salud" element={<Home />} />
+            
+            {/* New Hub Pages */}
+            <Route path="/tecnologia" element={<InteligenciaArtificial />} />
+            <Route path="/casos-partners" element={<Home />} />
+            <Route path="/cultura-allcom" element={<Team />} />
+            
+            {/* Legacy Pages - Keep for now */}
             <Route path="/productos" element={<Products />} />
             <Route path="/producto/:slug" element={<ProductDetail />} />
             <Route path="/servicios" element={<Services />} />
