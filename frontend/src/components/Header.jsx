@@ -25,148 +25,116 @@ const Header = ({ onOpenAISearch }) => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <Link
               to="/"
               data-testid="nav-home"
-              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
-                isActive('/') ? 'text-emerald-700' : 'text-gray-600'
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${
+                isActive('/') ? 'text-blue-700' : 'text-gray-600'
               }`}
             >
-              Inicio
+              Home
             </Link>
-            {/* Productos Dropdown */}
+            
+            {/* Ecosistemas Dropdown */}
             <div className="relative group">
-              <button className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors flex items-center">
-                Productos
+              <button className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors flex items-center">
+                Ecosistemas
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
                   <Link
-                    to="/productos"
-                    data-testid="nav-products"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors border-l-2 border-transparent hover:border-emerald-500"
+                    to="/ecosistema-retail"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors border-l-4 border-transparent hover:border-emerald-500"
+                    data-testid="nav-retail"
                   >
-                    <div className="font-medium">Catálogo Completo</div>
-                    <div className="text-xs text-gray-500">Todos nuestros productos</div>
+                    <div className="font-bold flex items-center gap-2">
+                      🛒 Allcom Retail
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">Kioscos, POS, Balanzas + Software</div>
                   </Link>
                   <Link
-                    to="/alianza-imin"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-green-50 hover:text-green-700 transition-colors border-l-2 border-transparent hover:border-green-500"
-                    data-testid="nav-imin"
+                    to="/ecosistema-banca"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border-l-4 border-transparent hover:border-blue-500"
+                    data-testid="nav-banca"
                   >
-                    <div className="font-medium">Alianza IMIN</div>
-                    <div className="text-xs text-gray-500">POS y Kioscos Android</div>
+                    <div className="font-bold flex items-center gap-2">
+                      🏦 Allcom Banca
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">Tótems, Colas Digitales, Atención</div>
                   </Link>
                   <Link
-                    to="/alianza-wintec"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border-l-2 border-transparent hover:border-blue-500"
-                    data-testid="nav-wintec"
+                    to="/ecosistema-industria"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors border-l-4 border-transparent hover:border-gray-700"
+                    data-testid="nav-industria"
                   >
-                    <div className="font-medium">Alianza Wintec</div>
-                    <div className="text-xs text-gray-500">Soluciones POS Globales</div>
+                    <div className="font-bold flex items-center gap-2">
+                      🏭 Allcom Industria
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">Servidores, Pesaje, Logística</div>
                   </Link>
                   <Link
-                    to="/alianza-marques"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-700 transition-colors border-l-2 border-transparent hover:border-red-500"
-                    data-testid="nav-marques"
+                    to="/ecosistema-smart-city"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-700 transition-colors border-l-4 border-transparent hover:border-orange-500"
+                    data-testid="nav-smartcity"
                   >
-                    <div className="font-medium">Alianza Balanças Marques</div>
-                    <div className="text-xs text-gray-500">Balanzas Premiadas</div>
+                    <div className="font-bold flex items-center gap-2">
+                      🌆 Allcom Smart City
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">IoT, Carga, Control Urbano</div>
+                  </Link>
+                  <Link
+                    to="/ecosistema-salud"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors border-l-4 border-transparent hover:border-teal-500"
+                    data-testid="nav-salud"
+                  >
+                    <div className="font-bold flex items-center gap-2">
+                      ⚕️ Allcom Salud
+                    </div>
+                    <div className="text-xs text-gray-500 mt-1">Tótems Hospitalarios, Turnos</div>
                   </Link>
                 </div>
               </div>
             </div>
             
-            {/* Soluciones Dropdown */}
-            <div className="relative group">
-              <button className="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors flex items-center">
-                Soluciones
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div className="py-2">
-                  <Link
-                    to="/plataformas-servidores"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-700 transition-colors border-l-2 border-transparent hover:border-red-500"
-                    data-testid="nav-servidores"
-                  >
-                    <div className="font-medium">Plataformas / Servidores</div>
-                    <div className="text-xs text-gray-500">HP, Lenovo, Dell + VMware</div>
-                  </Link>
-                  <Link
-                    to="/eventos-kioskos"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors border-l-2 border-transparent hover:border-cyan-500"
-                    data-testid="nav-eventos"
-                  >
-                    <div className="font-medium">Arriendo Kioskos Eventos</div>
-                    <div className="text-xs text-gray-500">Festivales y conferencias</div>
-                  </Link>
-                  <Link
-                    to="/aeropuerto-charger"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border-l-2 border-transparent hover:border-blue-500"
-                    data-testid="nav-aeropuerto"
-                  >
-                    <div className="font-medium">Cargadores Aeropuertos</div>
-                    <div className="text-xs text-gray-500">Estaciones de carga inteligentes</div>
-                  </Link>
-                  <Link
-                    to="/alianza-justo"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-lime-50 hover:text-lime-700 transition-colors border-l-2 border-transparent hover:border-lime-500"
-                    data-testid="nav-justo"
-                  >
-                    <div className="font-medium">Software POS Restaurantes</div>
-                    <div className="text-xs text-gray-500">Alianza ALLCOM + JUSTO</div>
-                  </Link>
-                </div>\n              </div>
-            </div>
-            
             <Link
-              to="/servicios"
-              data-testid="nav-services"
-              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
-                isActive('/servicios') ? 'text-emerald-700' : 'text-gray-600'
+              to="/tecnologia"
+              data-testid="nav-tecnologia"
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${
+                isActive('/tecnologia') ? 'text-blue-700' : 'text-gray-600'
               }`}
             >
-              Servicios
+              Tecnología
             </Link>
             
             <Link
-              to="/inteligencia-artificial"
-              data-testid="nav-ia"
-              className={`text-sm font-medium hover:text-purple-600 transition-colors flex items-center gap-1 ${
-                isActive('/inteligencia-artificial') ? 'text-purple-700' : 'text-gray-600'
+              to="/casos-partners"
+              data-testid="nav-casos"
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${
+                isActive('/casos-partners') ? 'text-blue-700' : 'text-gray-600'
               }`}
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-              Inteligencia Artificial
+              Casos y Partners
             </Link>
             
             <Link
-              to="/team"
-              data-testid="nav-team"
-              className={`text-sm font-medium hover:text-emerald-600 transition-colors flex items-center gap-1 ${
-                isActive('/team') ? 'text-emerald-700' : 'text-gray-600'
+              to="/cultura-allcom"
+              data-testid="nav-cultura"
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${
+                isActive('/cultura-allcom') ? 'text-blue-700' : 'text-gray-600'
               }`}
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-              Team
+              Cultura Allcom
             </Link>
             
             <Link
               to="/contacto"
               data-testid="nav-contact"
-              className={`text-sm font-medium hover:text-emerald-600 transition-colors ${
-                isActive('/contacto') ? 'text-emerald-700' : 'text-gray-600'
+              className={`text-sm font-medium hover:text-blue-600 transition-colors ${
+                isActive('/contacto') ? 'text-blue-700' : 'text-gray-600'
               }`}
             >
               Contacto
