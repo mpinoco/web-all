@@ -419,7 +419,7 @@ const Home = () => {
                 </div>
                 <div className="text-sm text-gray-300 font-medium">Países Conectados</div>
                 <div className="mt-2 flex items-center justify-center gap-2 text-blue-400 text-xs">
-                  <Shield Check className="w-4 h-4" />
+                  <ShieldCheck className="w-4 h-4" />
                   <span>100% Uptime</span>
                 </div>
               </div>
