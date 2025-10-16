@@ -47,6 +47,45 @@ const Home = () => {
 
     fetchData();
   }, []);
+  
+  // Animated Live Metrics
+  useEffect(() => {
+    const intervals = [
+      setInterval(() => setEquiposActivos(prev => prev + Math.floor(Math.random() * 3)), 5000),
+      setInterval(() => setInteraccionesHoy(prev => prev + Math.floor(Math.random() * 50)), 3000),
+      setInterval(() => setReduccionTiempo(prev => Math.min(40, prev + (Math.random() > 0.5 ? 0.1 : 0))), 4000)
+    ];
+    
+    return () => intervals.forEach(clearInterval);
+  }, []);
+  
+  // AI Configurator Logic
+  const handleConfiguratorSubmit = () => {
+    if (!selectedEnvironment || !selectedGoal) return;
+    
+    const suggestions = {
+      'Retail-Reducir tiempos': 'IM Station + Balanza Inteligente + Software QTruck',
+      'Retail-Automatizar': 'Kiosko Autopago + POS Táctil + Sistema de Cola Digital',
+      'Retail-Mejorar atención': 'Terminal POS Premium + CRM Integrado + Dashboard Analytics',
+      'Minería-Reducir tiempos': 'Balanza Industrial + Terminal Rugerizado + Software Pesaje',
+      'Minería-Automatizar': 'Sistema Automatizado de Pesaje + IoT Sensors + Cloud Platform',
+      'Minería-Mejorar atención': 'Terminal Móvil + Sistema de Tickets + Monitoreo Remoto',
+      'Banca-Reducir tiempos': 'Tótem de Autoservicio + Cola Digital + App Móvil',
+      'Banca-Automatizar': 'Sistema de Turnos IA + Kiosko Bancario + Firma Digital',
+      'Banca-Mejorar atención': 'Terminal Interactivo + CRM Bancario + Video Asistencia',
+      'Ciudad-Reducir tiempos': 'Cargadores Públicos + Sensores IoT + Dashboard Urbano',
+      'Ciudad-Automatizar': 'Sistema de Iluminación IA + Monitoreo Tráfico + Alertas Automáticas',
+      'Ciudad-Mejorar atención': 'Tótems Informativos + App Ciudadana + Reportes en Tiempo Real'
+    };
+    
+    const key = `${selectedEnvironment}-${selectedGoal}`;
+    setAiSuggestion(suggestions[key] || 'IM Station + POS + Software Integrado');
+    setShowDemo(true);
+    
+    setTimeout(() => {
+      document.querySelector('#ai-result')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   const getIcon = (iconName) => {
     const icons = {
