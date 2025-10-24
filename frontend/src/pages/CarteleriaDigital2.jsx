@@ -199,7 +199,9 @@ const CarteleriaDigital2 = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SEO {...seoData} />
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section 
         className="relative min-h-[85vh] bg-cover bg-center overflow-hidden"
