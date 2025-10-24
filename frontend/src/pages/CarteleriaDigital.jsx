@@ -465,12 +465,12 @@ const CarteleriaDigital = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             ¿Listo para revolucionar tu comunicación?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Agenda una demostración gratuita y descubre cómo la cartelería digital 
             puede transformar tu negocio
           </p>
@@ -478,7 +478,7 @@ const CarteleriaDigital = () => {
             <Button 
               asChild
               size="lg"
-              className="bg-white text-blue-600 hover:bg-blue-50 shadow-xl"
+              className="bg-white text-gray-900 hover:bg-gray-100 shadow-xl"
             >
               <Link to="/contacto">
                 Agendar Demo Gratuita
@@ -489,7 +489,7 @@ const CarteleriaDigital = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900"
             >
               <Link to="/cotizacion">Solicitar Cotización</Link>
             </Button>
