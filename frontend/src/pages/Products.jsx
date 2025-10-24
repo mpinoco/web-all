@@ -59,6 +59,14 @@ const Products = () => {
   };
 
   return (
+    <>
+      <SEO 
+        title={seoData.products.title}
+        description={seoData.products.description}
+        keywords={seoData.products.keywords}
+        canonicalUrl={seoData.products.canonicalUrl}
+        schema={seoData.products.schema}
+      />
     <main className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="mb-8">
