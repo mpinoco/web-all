@@ -243,9 +243,9 @@ const CarteleriaDigital = () => {
                       alt={product.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-60`}></div>
+                    <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-70`}></div>
                     <div className="absolute top-4 right-4">
-                      <div className="bg-white/90 p-3 rounded-full">
+                      <div className="bg-white/95 p-3 rounded-full">
                         <IconComponent className="w-6 h-6 text-gray-900" />
                       </div>
                     </div>
