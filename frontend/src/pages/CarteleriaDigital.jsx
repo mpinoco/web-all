@@ -163,7 +163,7 @@ const CarteleriaDigital = () => {
               <Button 
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white shadow-lg"
+                className="bg-gradient-to-r from-gray-700 to-gray-900 hover:from-gray-800 hover:to-black text-white shadow-lg"
               >
                 <Link to="/contacto">
                   Solicitar Asesoría
@@ -174,7 +174,7 @@ const CarteleriaDigital = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900"
               >
                 <Link to="/productos">Ver Catálogo</Link>
               </Button>
