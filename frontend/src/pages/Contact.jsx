@@ -1,31 +1,23 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { Label } from '../components/ui/label';
-import { Card, CardContent } from '../components/ui/card';
-import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { toast } from 'sonner';
+import SEO from '../components/SEO';
+import Hashtags from '../components/Hashtags';
+import seoData from '../data/seoData';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
-    company: '',
     email: '',
     phone: '',
-    region: '',
-    intent: 'cotizacion',
+    company: '',
     message: ''
   });
   const [loading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,231 +25,148 @@ const Contact = () => {
 
     try {
       await axios.post(`${BACKEND_URL}/api/contact`, formData);
-      toast.success('¡Mensaje enviado! Te contactaremos dentro de 24 horas hábiles.');
+      toast.success('Mensaje enviado correctamente. Te contactaremos pronto!');
       setFormData({
         name: '',
-        company: '',
         email: '',
         phone: '',
-        region: '',
-        intent: 'cotizacion',
+        company: '',
         message: ''
       });
     } catch (error) {
-      console.error('Error sending contact:', error);
-      toast.error('Error al enviar mensaje. Inténtalo nuevamente.');
+      console.error('Error sending message:', error);
+      toast.error('Error al enviar el mensaje. Por favor intenta nuevamente.');
     } finally {
       setLoading(false);
     }
   };
 
-  return (
-    <main className="py-12 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-testid="contact-title">
-              Contáctanos
-            </h1>
-            <p className="text-xl text-gray-600">
-              Estamos aquí para ayudarte. Respuesta garantizada en 24 horas hábiles.
-            </p>
-          </div>
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Contact Form */}
-            <Card>
-              <CardContent className="p-6">
-                <form onSubmit={handleSubmit} className="space-y-4">
+  return (
+    <>
+      <SEO 
+        title={seoData.contact.title}
+        description={seoData.contact.description}
+        keywords={seoData.contact.keywords}
+        canonicalUrl={seoData.contact.canonicalUrl}
+        schema={seoData.contact.schema}
+      />
+      <main className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-3xl">Contáctanos</CardTitle>
+              <p className="text-gray-600 mt-2">Respuesta en menos de 24 horas</p>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="name">Nombre completo *</Label>
-                    <Input
-                      id="name"
-                      name="name"
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Nombre *
+                    </label>
+                    <input
                       type="text"
+                      name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      data-testid="contact-name"
-                      placeholder="Juan Pérez"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     />
                   </div>
-
                   <div>
-                    <Label htmlFor="company">Empresa *</Label>
-                    <Input
-                      id="company"
-                      name="company"
-                      type="text"
-                      required
-                      value={formData.company}
-                      onChange={handleChange}
-                      data-testid="contact-company"
-                      placeholder="Mi Empresa S.A."
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Email *
+                    </label>
+                    <input
                       type="email"
+                      name="email"
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      data-testid="contact-email"
-                      placeholder="juan@empresa.cl"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     />
                   </div>
+                </div>
 
+                <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="phone">Teléfono / WhatsApp *</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Teléfono
+                    </label>
+                    <input
                       type="tel"
-                      required
+                      name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      data-testid="contact-phone"
-                      placeholder="+56 9 1234 5678"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     />
                   </div>
-
                   <div>
-                    <Label htmlFor="region">Región *</Label>
-                    <Input
-                      id="region"
-                      name="region"
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Empresa
+                    </label>
+                    <input
                       type="text"
-                      required
-                      value={formData.region}
+                      name="company"
+                      value={formData.company}
                       onChange={handleChange}
-                      data-testid="contact-region"
-                      placeholder="Región Metropolitana"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                     />
                   </div>
+                </div>
 
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Mensaje *
+                  </label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-emerald-600 hover:bg-emerald-700"
+                >
+                  {loading ? 'Enviando...' : 'Enviar Mensaje'}
+                </Button>
+              </form>
+
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
-                    <Label htmlFor="intent">Motivo de contacto *</Label>
-                    <Select
-                      value={formData.intent}
-                      onValueChange={(value) => setFormData({ ...formData, intent: value })}
-                    >
-                      <SelectTrigger data-testid="contact-intent">
-                        <SelectValue placeholder="Selecciona un motivo" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="cotizacion">Solicitar cotización</SelectItem>
-                        <SelectItem value="compra">Consulta de compra</SelectItem>
-                        <SelectItem value="soporte">Soporte técnico</SelectItem>
-                        <SelectItem value="partner">Alianza comercial</SelectItem>
-                      </SelectContent>
-                    </Select>
+                    <h3 className="font-semibold text-gray-900 mb-2">WhatsApp</h3>
+                    <p className="text-gray-600">+56 9 1234 5678</p>
                   </div>
-
                   <div>
-                    <Label htmlFor="message">Mensaje *</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      required
-                      value={formData.message}
-                      onChange={handleChange}
-                      data-testid="contact-message"
-                      placeholder="Cuéntanos sobre tu proyecto o necesidad..."
-                      rows={4}
-                    />
+                    <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+                    <p className="text-gray-600">ventas@allcom.cl</p>
                   </div>
-
-                  <Button
-                    type="submit"
-                    disabled={loading}
-                    data-testid="contact-submit"
-                    className="w-full bg-slate-700 hover:bg-slate-800"
-                    size="lg"
-                  >
-                    {loading ? 'Enviando...' : 'Enviar mensaje'}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-slate-700" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Teléfono</h3>
-                      <p className="text-gray-600">+56 2 1234 5678</p>
-                      <p className="text-sm text-gray-500">Lun-Vie, 9:00 - 18:00</p>
-                    </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Oficina</h3>
+                    <p className="text-gray-600">Santiago, Chile</p>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">WhatsApp Business</h3>
-                      <p className="text-gray-600">+56 9 1234 5678</p>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="mt-2"
-                        data-testid="contact-whatsapp"
-                      >
-                        Abrir chat
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-slate-700" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-600">ventas@alcom.cl</p>
-                      <p className="text-sm text-gray-500">Respuesta en 24h hábiles</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-slate-700" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Dirección</h3>
-                      <p className="text-gray-600">Av. Providencia 1234</p>
-                      <p className="text-gray-600">Santiago, Chile</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      </div>
-    </main>
+      </main>
+      <Hashtags tags={seoData.contact.hashtags} />
+    </>
   );
 };
 
