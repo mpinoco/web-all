@@ -9,6 +9,9 @@ import KPIVertical from '../components/KPIVertical';
 import ProductsMenuVisual from '../components/ProductsMenuVisual';
 import PartnersCarousel from '../components/PartnersCarousel';
 import ClientsGrid from '../components/ClientsGrid';
+import SEO from '../components/SEO';
+import Hashtags from '../components/Hashtags';
+import seoData from '../data/seoData';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
