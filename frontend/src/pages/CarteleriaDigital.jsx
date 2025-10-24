@@ -25,6 +25,11 @@ const CarteleriaDigital = () => {
       icon: Monitor,
       title: 'Múltiples Formatos',
       description: 'Pantallas profesionales, displays tipo barra, video walls y pantallas especiales'
+    },
+    {
+      icon: Package,
+      title: 'Monetización Publicitaria',
+      description: 'Genera ingresos adicionales vendiendo espacios publicitarios en tus pantallas'
     }
   ];
 
