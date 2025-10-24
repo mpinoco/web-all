@@ -93,6 +93,7 @@ function App() {
             <Route path="/inteligencia-artificial" element={<InteligenciaArtificial />} />
             <Route path="/team" element={<Team />} />
             <Route path="/carteleria-digital" element={<CarteleriaDigital />} />
+            <Route path="/carteleria-digital-2" element={<CarteleriaDigital2 />} />
             <Route path="/contacto" element={<Contact />} />
             <Route path="/cotizacion" element={<QuoteCart />} />
             <Route path="/eventos-kioskos" element={<EventosKioskos />} />
