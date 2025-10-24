@@ -752,6 +752,7 @@ const CarteleriaDigital2 = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
