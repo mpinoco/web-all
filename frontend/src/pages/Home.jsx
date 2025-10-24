@@ -236,9 +236,9 @@ const Home = () => {
                 <div
                   key={service.id}
                   data-testid={`service-card-${service.slug}`}
-                  className="bg-gradient-to-br from-white to-allcom-50 border border-allcom-100 rounded-lg p-6 hover:shadow-lg hover:border-allcom-200 transition-all"
+                  className="bg-gradient-to-br from-white to-emerald-50 border border-emerald-100 rounded-lg p-6 hover:shadow-lg hover:border-emerald-200 transition-all"
                 >
-                  <IconComponent className="w-10 h-10 text-allcom-600 mb-4" />
+                  <IconComponent className="w-10 h-10 text-emerald-600 mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.name}</h3>
                   <p className="text-sm text-gray-600 mb-4">{service.summary}</p>
                   <ul className="space-y-1">
@@ -259,7 +259,7 @@ const Home = () => {
               asChild
               size="lg"
               data-testid="services-cta"
-              className="bg-allcom-600 hover:bg-allcom-700 shadow-lg"
+              className="bg-emerald-600 hover:bg-emerald-700 shadow-lg"
             >
               <Link to="/servicios">Ver todos los servicios</Link>
             </Button>
