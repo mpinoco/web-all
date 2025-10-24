@@ -3,10 +3,66 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Zap, Cloud, Monitor, Settings, DollarSign, BarChart3, Clock, ShieldCheck, Play, ChevronRight, Calculator } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import SEO from '../components/SEO';
 
 const CarteleriaDigital2 = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [showBeforeAfter, setShowBeforeAfter] = useState(false);
+  
+  const seoData = {
+    title: 'Cartelería Digital que Vende y se Administra Sola - ROI Calculable',
+    description: 'Pantallas profesionales 24/7, alto brillo hasta 3000 cd/m², CMS en la nube y soporte integral ALLCOM. Instalamos, operamos y medimos para maximizar tu negocio. Calcula tu ROI ahora.',
+    keywords: 'cartelería digital retail, calculadora ROI digital signage, pantallas restaurantes, menús digitales, CMS horarios, monetización DOOH, pantallas 3000 cd/m², videowall 1.8mm, Android OS signage, soluciones retail Chile',
+    canonicalUrl: '/carteleria-digital-2',
+    ogImage: 'https://allcom.cl/images/carteleria2_hero.png',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      name: 'Cartelería Digital ALLCOM - Solución Integral',
+      description: 'Servicio completo de cartelería digital para retail: desde asesoría e instalación hasta operación 24/7 y monetización de pantallas.',
+      provider: {
+        '@type': 'Organization',
+        name: 'ALLCOM',
+        url: 'https://allcom.cl',
+        address: {
+          '@type': 'PostalAddress',
+          addressCountry: 'CL',
+          addressLocality: 'Santiago'
+        }
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'Chile'
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Soluciones de Cartelería Digital',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Serie S - Pantallas Profesionales 32"-86"'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Serie B - Bar Displays 23"-47"'
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Product',
+              name: 'Serie Especial - Videowall y Outdoor'
+            }
+          }
+        ]
+      }
+    }
+  };
   
   // Calculadora ROI
   const [roiInputs, setRoiInputs] = useState({
