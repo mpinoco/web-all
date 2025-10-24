@@ -165,7 +165,7 @@ const Home = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="py-20 bg-gradient-to-br from-allcom-50 via-allcom-100 to-allcom-50" data-testid="categories-section">
+      <section className="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50" data-testid="categories-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Soluciones para cada necesidad</h2>
@@ -190,8 +190,8 @@ const Home = () => {
                   onClick={() => window.location.href = `/productos?category=${category.slug}`}
                 >
                   <CardContent className="p-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-allcom-100 to-allcom-200 rounded-lg flex items-center justify-center mb-4">
-                      <IconComponent className="w-7 h-7 text-allcom-700" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg flex items-center justify-center mb-4">
+                      <IconComponent className="w-7 h-7 text-emerald-700" />
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.name}</h3>
                     <p className="text-sm text-gray-600">{category.description}</p>
