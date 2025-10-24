@@ -332,6 +332,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      <Hashtags hashtags={seoData.home.hashtags} />
     </main>
     </>
   );
