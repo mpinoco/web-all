@@ -146,7 +146,7 @@ const CarteleriaDigital = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="relative h-full container mx-auto px-4 flex items-center">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-2 bg-blue-500/90 text-white rounded-full text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-2 bg-gray-800/90 text-white rounded-full text-sm font-semibold mb-6">
               ✨ Soluciones de Cartelería Digital
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
