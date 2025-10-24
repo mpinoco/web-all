@@ -132,13 +132,13 @@ const CarteleriaDigital = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section 
-        className="relative h-[70vh] bg-cover bg-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"
+        className="relative h-[70vh] bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1591165070967-b716648a30d6?w=1920&auto=format&fit=crop')`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/carteleria_hero.jpg')`,
           backgroundBlendMode: 'overlay'
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
         <div className="relative h-full container mx-auto px-4 flex items-center">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-2 bg-blue-500/90 text-white rounded-full text-sm font-semibold mb-6">
