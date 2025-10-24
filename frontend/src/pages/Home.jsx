@@ -160,7 +160,7 @@ const Home = () => {
       </section>
 
       {/* Main KPI Section - Full 6 indicators */}
-      <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700">
+      <section className="py-12 md:py-16 bg-gradient-to-br from-allcom-700 via-allcom-600 to-allcom-800">
         <KPISection variant="main" />
       </section>
 
