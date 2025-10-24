@@ -64,7 +64,8 @@ const Home = () => {
         title={seoData.home.title}
         description={seoData.home.description}
         keywords={seoData.home.keywords}
-        canonical={seoData.home.canonical}
+        canonicalUrl={seoData.home.canonicalUrl}
+        schema={seoData.home.schema}
       />
       {/* Schema.org Structured Data */}
       <script type="application/ld+json">
