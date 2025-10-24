@@ -138,7 +138,7 @@ const Home = () => {
                 asChild
                 size="lg"
                 data-testid="hero-cta-products"
-                className="bg-emerald-500 text-white hover:bg-emerald-600 shadow-lg"
+                className="bg-allcom-500 text-white hover:bg-allcom-600 shadow-lg"
               >
                 <Link to="/productos">
                   Ver soluciones
@@ -150,7 +150,7 @@ const Home = () => {
                 size="lg"
                 variant="outline"
                 data-testid="hero-cta-contact"
-                className="border-emerald-400 text-emerald-400 hover:bg-emerald-500 hover:text-white hover:border-emerald-500"
+                className="border-allcom-400 text-allcom-400 hover:bg-allcom-500 hover:text-white hover:border-allcom-500"
               >
                 <Link to="/contacto">Hablar por WhatsApp</Link>
               </Button>
