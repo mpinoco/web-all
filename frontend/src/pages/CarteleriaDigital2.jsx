@@ -145,7 +145,12 @@ const CarteleriaDigital2 = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] bg-gradient-to-br from-[#0E1F2A] via-[#1a3a47] to-[#0E1F2A] text-white overflow-hidden">
+      <section 
+        className="relative min-h-[85vh] bg-cover bg-center overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(14, 31, 42, 0.7), rgba(14, 31, 42, 0.7)), url('/images/carteleria2_hero.png')`
+        }}
+      >
         {/* Decorative gradient blobs */}
         <div className="absolute top-20 left-10 w-96 h-96 bg-[#2ECC71] opacity-10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2ECC71] opacity-10 rounded-full blur-3xl"></div>
