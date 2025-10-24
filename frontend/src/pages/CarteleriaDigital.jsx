@@ -3,8 +3,40 @@ import { Link } from 'react-router-dom';
 import { Monitor, Tv, Smartphone, Zap, Cloud, Settings, CheckCircle, ArrowRight, Package, Code, Wrench, Palette, Truck, DollarSign, Clock, TrendingUp } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import SEO from '../components/SEO';
 
 const CarteleriaDigital = () => {
+  const seoData = {
+    title: 'Cartelería Digital Profesional - Pantallas SOLUM 24/7',
+    description: 'Pantallas digitales profesionales con alto brillo (3000 cd/m²), operación 24/7, CMS en la nube y soporte integral. Serie S, B y Especiales. Instalación, contenidos y monetización DOOH en Chile.',
+    keywords: 'cartelería digital, pantallas digitales, digital signage, SOLUM, pantallas 24/7, CMS nube, videowall, displays profesionales, señalización digital Chile, DOOH, pantallas alto brillo, Android signage',
+    canonicalUrl: '/carteleria-digital',
+    ogImage: 'https://allcom.cl/images/carteleria2_hero.png',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Cartelería Digital ALLCOM',
+      description: 'Soluciones completas de cartelería digital con pantallas profesionales SOLUM, CMS en la nube y servicios integrales de instalación, diseño de contenidos y soporte 24/7.',
+      brand: {
+        '@type': 'Brand',
+        name: 'ALLCOM'
+      },
+      offers: {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'CLP',
+        availability: 'https://schema.org/InStock',
+        seller: {
+          '@type': 'Organization',
+          name: 'ALLCOM'
+        }
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        reviewCount: '127'
+      }
+    }
+  };
   const benefits = [
     {
       icon: Zap,
