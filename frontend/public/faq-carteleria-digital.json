@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto demora la instalación de cartelería digital?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La instalación de cartelería digital toma entre 2-5 días hábiles dependiendo del tamaño del proyecto. Realizamos instalación profesional con mínima interrupción a tu operación comercial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluye el soporte 24/7 de ALLCOM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestro soporte 24/7 incluye monitoreo remoto de todas las pantallas, actualizaciones de contenido, soporte técnico inmediato y reemplazo de equipos en garantía a nivel nacional en Chile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo integrar la cartelería digital con mi sistema POS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, nuestro CMS se integra con la mayoría de sistemas POS y kioscos mediante API REST. Soportamos integración con JUSTO, Toteat, FUDO y otros sistemas populares en Chile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Quién crea los contenidos para las pantallas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofrecemos dos opciones: podemos crear y gestionar los contenidos por ti, o capacitamos a tu equipo para que los maneje de forma autónoma usando nuestras plantillas prediseñadas en el CMS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo funciona la monetización DOOH de pantallas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes vender espacios publicitarios en tus pantallas a marcas locales o nacionales. El CMS permite programar horarios específicos para publicidad de terceros, generar reportes y gestionar campañas, creando una fuente de ingresos recurrente que acelera el ROI."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el brillo de las pantallas SOLUM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las pantallas SOLUM ofrecen hasta 3000 cd/m² de brillo, ideal para instalaciones semi-outdoor. Las pantallas indoor estándar tienen 700 cd/m², el doble que una TV convencional, garantizando perfecta visibilidad en cualquier condición de luz."
+      }
+    }
+  ]
+}
