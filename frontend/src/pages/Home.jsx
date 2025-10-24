@@ -60,6 +60,12 @@ const Home = () => {
 
   return (
     <>
+      <SEO 
+        title={seoData.home.title}
+        description={seoData.home.description}
+        keywords={seoData.home.keywords}
+        canonical={seoData.home.canonical}
+      />
       {/* Schema.org Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
