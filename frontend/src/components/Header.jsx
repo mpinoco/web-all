@@ -146,6 +146,19 @@ const Header = ({ onOpenAISearch }) => {
             </Link>
             
             <Link
+              to="/esto-hacemos"
+              data-testid="nav-esto-hacemos"
+              className="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors flex items-center gap-1"
+            >
+              <span className="relative">
+                Esto Hacemos
+                <span className="absolute -top-2 -right-8 px-2 py-0.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-xs rounded-full animate-pulse">
+                  NEW
+                </span>
+              </span>
+            </Link>
+            
+            <Link
               to="/inteligencia-artificial"
               data-testid="nav-ia"
               className={`text-sm font-medium hover:text-purple-600 transition-colors flex items-center gap-1 ${
