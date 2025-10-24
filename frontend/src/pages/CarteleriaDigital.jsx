@@ -139,8 +139,7 @@ const CarteleriaDigital = () => {
       <section 
         className="relative h-[70vh] bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/carteleria_hero.jpg')`,
-          backgroundBlendMode: 'overlay'
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/carteleria2_hero.png')`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-slate-900/10"></div>
