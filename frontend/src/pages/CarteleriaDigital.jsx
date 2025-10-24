@@ -41,7 +41,7 @@ const CarteleriaDigital = () => {
       sizes: ['32"', '43"', '55"', '65"', '75"', '86"'],
       resolution: 'FHD / UHD',
       icon: Tv,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-gray-600 to-gray-800',
       image: 'https://images.unsplash.com/photo-1639087595550-e9770a85f8c0?w=800&auto=format&fit=crop'
     },
     {
@@ -51,7 +51,7 @@ const CarteleriaDigital = () => {
       sizes: ['23"', '24"', '25"', '29"', '35"', '37"', '47"'],
       resolution: 'FHD / UHD',
       icon: Smartphone,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-gray-500 to-gray-700',
       image: 'https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop'
     },
     {
@@ -61,7 +61,7 @@ const CarteleriaDigital = () => {
       sizes: ['10.1"', '49"', '55"', 'Dual', 'Video Wall'],
       resolution: 'UHD / Custom',
       icon: Package,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-gray-700 to-gray-900',
       image: 'https://images.unsplash.com/photo-1649150849642-c53366ebb480?w=800&auto=format&fit=crop'
     }
   ];
