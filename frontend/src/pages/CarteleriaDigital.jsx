@@ -332,9 +332,11 @@ const CarteleriaDigital = () => {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all duration-300">
+              <Card className="border-2 border-gray-200 hover:border-cyan-400 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="text-5xl mb-4">📊</div>
+                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-2xl flex items-center justify-center">
+                    <DollarSign className="w-10 h-10 text-white" strokeWidth={2.5} />
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Vende Espacios</h3>
                   <p className="text-gray-600">
                     Ofrece espacios publicitarios a marcas locales o nacionales en horarios específicos
@@ -342,9 +344,11 @@ const CarteleriaDigital = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all duration-300">
+              <Card className="border-2 border-gray-200 hover:border-purple-400 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="text-5xl mb-4">⏰</div>
+                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-400 to-pink-600 rounded-2xl flex items-center justify-center">
+                    <Clock className="w-10 h-10 text-white" strokeWidth={2.5} />
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Gestión Horaria</h3>
                   <p className="text-gray-600">
                     Programa contenido propio y anuncios publicitarios en diferentes franjas horarias
@@ -352,9 +356,11 @@ const CarteleriaDigital = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all duration-300">
+              <Card className="border-2 border-gray-200 hover:border-emerald-400 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <div className="text-5xl mb-4">💵</div>
+                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-emerald-400 to-teal-600 rounded-2xl flex items-center justify-center">
+                    <TrendingUp className="w-10 h-10 text-white" strokeWidth={2.5} />
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">ROI Acelerado</h3>
                   <p className="text-gray-600">
                     Recupera la inversión en pantallas más rápido con ingresos publicitarios recurrentes
