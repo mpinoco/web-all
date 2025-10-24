@@ -83,33 +83,35 @@ function App() {
       removeFromQuote,
       clearQuote
     }}>
-      <div className="App">
-        <BrowserRouter>
-          <Header onOpenAISearch={() => setShowAISearch(true)} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/productos" element={<Products />} />
-            <Route path="/producto/:slug" element={<ProductDetail />} />
-            <Route path="/servicios" element={<Services />} />
-            <Route path="/inteligencia-artificial" element={<InteligenciaArtificial />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/carteleria-digital" element={<CarteleriaDigital />} />
-            <Route path="/carteleria-digital-2" element={<CarteleriaDigital2 />} />
-            <Route path="/contacto" element={<Contact />} />
-            <Route path="/cotizacion" element={<QuoteCart />} />
-            <Route path="/eventos-kioskos" element={<EventosKioskos />} />
-            <Route path="/aeropuerto-charger" element={<AeropuertoCharger />} />
-            <Route path="/alianza-justo" element={<AlianzaJusto />} />
-            <Route path="/alianza-imin" element={<AlianzaIMIN />} />
-            <Route path="/alianza-wintec" element={<AlianzaWintec />} />
-            <Route path="/alianza-marques" element={<AlianzaMarques />} />
-          </Routes>
-          <Footer />
-          <WhatsAppButton />
-          <AISearchModal open={showAISearch} onClose={() => setShowAISearch(false)} />
-          <Toaster position="top-right" />
-        </BrowserRouter>
-      </div>
+      <HelmetProvider>
+        <div className="App">
+          <BrowserRouter>
+            <Header onOpenAISearch={() => setShowAISearch(true)} />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/productos" element={<Products />} />
+              <Route path="/producto/:slug" element={<ProductDetail />} />
+              <Route path="/servicios" element={<Services />} />
+              <Route path="/inteligencia-artificial" element={<InteligenciaArtificial />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/carteleria-digital" element={<CarteleriaDigital />} />
+              <Route path="/carteleria-digital-2" element={<CarteleriaDigital2 />} />
+              <Route path="/contacto" element={<Contact />} />
+              <Route path="/cotizacion" element={<QuoteCart />} />
+              <Route path="/eventos-kioskos" element={<EventosKioskos />} />
+              <Route path="/aeropuerto-charger" element={<AeropuertoCharger />} />
+              <Route path="/alianza-justo" element={<AlianzaJusto />} />
+              <Route path="/alianza-imin" element={<AlianzaIMIN />} />
+              <Route path="/alianza-wintec" element={<AlianzaWintec />} />
+              <Route path="/alianza-marques" element={<AlianzaMarques />} />
+            </Routes>
+            <Footer />
+            <WhatsAppButton />
+            <AISearchModal open={showAISearch} onClose={() => setShowAISearch(false)} />
+            <Toaster position="top-right" />
+          </BrowserRouter>
+        </div>
+      </HelmetProvider>
     </QuoteContext.Provider>
   );
 }
