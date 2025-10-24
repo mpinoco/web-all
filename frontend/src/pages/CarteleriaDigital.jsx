@@ -288,14 +288,14 @@ const CarteleriaDigital = () => {
       </section>
 
       {/* Technical Features Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-blue-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 Características Técnicas
               </h2>
-              <p className="text-xl text-blue-200">
+              <p className="text-xl text-gray-300">
                 Tecnología de vanguardia para resultados excepcionales
               </p>
             </div>
@@ -306,10 +306,87 @@ const CarteleriaDigital = () => {
                   key={index}
                   className="flex items-start space-x-3 p-4 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all"
                 >
-                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-gray-300 flex-shrink-0 mt-1" />
                   <span className="text-gray-100">{feature}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Monetization Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded-full text-sm font-semibold mb-4">
+                💰 Monetización Inteligente
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Convierte tus Pantallas en una Fuente de Ingresos
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Genera ingresos adicionales vendiendo espacios publicitarios mientras informas a tus clientes
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="text-5xl mb-4">📊</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Vende Espacios</h3>
+                  <p className="text-gray-600">
+                    Ofrece espacios publicitarios a marcas locales o nacionales en horarios específicos
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="text-5xl mb-4">⏰</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Gestión Horaria</h3>
+                  <p className="text-gray-600">
+                    Programa contenido propio y anuncios publicitarios en diferentes franjas horarias
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-gray-200 hover:border-gray-400 hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 text-center">
+                  <div className="text-5xl mb-4">💵</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">ROI Acelerado</h3>
+                  <p className="text-gray-600">
+                    Recupera la inversión en pantallas más rápido con ingresos publicitarios recurrentes
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12 bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl p-8 md:p-12 text-white">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                    Modelo de Negocio Dual
+                  </h3>
+                  <p className="text-gray-300 text-lg">
+                    Tus pantallas trabajan para ti: informan a tus clientes durante el día 
+                    y generan ingresos publicitarios las 24 horas
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Button 
+                    asChild
+                    size="lg"
+                    className="bg-white text-gray-900 hover:bg-gray-100 shadow-lg"
+                  >
+                    <Link to="/contacto">
+                      Consultar Modelo de Monetización
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
