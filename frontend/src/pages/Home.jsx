@@ -159,6 +159,28 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Logo and IA Badge Section */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-start gap-6 md:gap-8">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <img 
+                src="/images/logo_emergent_gris.png" 
+                alt="Emergent Logo" 
+                className="h-16 md:h-20 w-auto"
+              />
+            </div>
+            {/* Text */}
+            <div className="flex items-center">
+              <p className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-700 text-center md:text-left">
+                Primera empresa de IA para el retail chileno
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Main KPI Section - Full 6 indicators */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700">
         <KPISection variant="main" />
