@@ -100,6 +100,14 @@ const Header = ({ onOpenAISearch }) => {
                     <div className="text-xs text-gray-500">Pantallas SOLUM y CMS</div>
                   </Link>
                   <Link
+                    to="/carteleria-digital-2"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-emerald-50 hover:text-emerald-700 transition-colors border-l-2 border-transparent hover:border-emerald-500"
+                    data-testid="nav-carteleria-2"
+                  >
+                    <div className="font-medium">Cartelería Digital 2</div>
+                    <div className="text-xs text-gray-500">Landing con calculadora ROI</div>
+                  </Link>
+                  <Link
                     to="/eventos-kioskos"
                     className="block px-4 py-3 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors border-l-2 border-transparent hover:border-cyan-500"
                     data-testid="nav-eventos"
