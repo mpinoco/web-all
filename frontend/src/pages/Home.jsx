@@ -274,7 +274,7 @@ const Home = () => {
       <ClientsGrid />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-800 via-emerald-700 to-teal-800 text-white" data-testid="cta-section">
+      <section className="py-20 bg-gradient-to-br from-allcom-800 via-allcom-700 to-allcom-900 text-white" data-testid="cta-section">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">¿Listo para optimizar tu operación?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -285,7 +285,7 @@ const Home = () => {
               asChild
               size="lg"
               data-testid="cta-quote"
-              className="bg-white text-emerald-800 hover:bg-emerald-50 shadow-lg"
+              className="bg-white text-allcom-800 hover:bg-allcom-50 shadow-lg"
             >
               <Link to="/cotizacion">Solicitar cotización</Link>
             </Button>
@@ -294,7 +294,7 @@ const Home = () => {
               size="lg"
               variant="outline"
               data-testid="cta-contact"
-              className="border-white text-white hover:bg-white hover:text-emerald-800"
+              className="border-white text-white hover:bg-white hover:text-allcom-800"
             >
               <Link to="/contacto">Contactar ahora</Link>
             </Button>
