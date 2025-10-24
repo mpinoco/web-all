@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, Tv, Smartphone, Zap, Cloud, Settings, CheckCircle, ArrowRight, Package, Code, Wrench, Palette, Truck } from 'lucide-react';
+import { Monitor, Tv, Smartphone, Zap, Cloud, Settings, CheckCircle, ArrowRight, Package, Code, Wrench, Palette, Truck, DollarSign, Clock, TrendingUp } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 
