@@ -171,6 +171,8 @@ const Products = () => {
         )}
       </div>
     </main>
+      <Hashtags tags={seoData.products.hashtags} />
+    </>
   );
 };
 
