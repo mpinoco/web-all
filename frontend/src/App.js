@@ -15,6 +15,7 @@ import AlianzaWintec from './pages/AlianzaWintec';
 import AlianzaMarques from './pages/AlianzaMarques';
 import InteligenciaArtificial from './pages/InteligenciaArtificial';
 import Team from './pages/Team';
+import CarteleriaDigital from './pages/CarteleriaDigital';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
