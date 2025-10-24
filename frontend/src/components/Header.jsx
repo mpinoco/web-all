@@ -92,6 +92,14 @@ const Header = ({ onOpenAISearch }) => {
               <div className="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
                   <Link
+                    to="/carteleria-digital"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors border-l-2 border-transparent hover:border-blue-500"
+                    data-testid="nav-carteleria"
+                  >
+                    <div className="font-medium">Cartelería Digital</div>
+                    <div className="text-xs text-gray-500">Pantallas SOLUM y CMS</div>
+                  </Link>
+                  <Link
                     to="/eventos-kioskos"
                     className="block px-4 py-3 text-sm text-gray-700 hover:bg-cyan-50 hover:text-cyan-700 transition-colors border-l-2 border-transparent hover:border-cyan-500"
                     data-testid="nav-eventos"
@@ -115,7 +123,8 @@ const Header = ({ onOpenAISearch }) => {
                     <div className="font-medium">Software POS Restaurantes</div>
                     <div className="text-xs text-gray-500">Alianza ALLCOM + JUSTO</div>
                   </Link>
-                </div>\n              </div>
+                </div>
+              </div>
             </div>
             
             <Link
