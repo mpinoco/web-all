@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   BarChart3, Package, Smartphone, FileText, Headphones, Shield, 
-  GraduationCap, Recycle, Store, Cube, Monitor, CheckCircle, 
+  GraduationCap, Recycle, Store, Box, Monitor, CheckCircle, 
   ArrowRight, Zap, Cloud, Calculator, Clock, TrendingUp, Bell,
   Camera, Wifi, CreditCard, Users, Award, Sparkles, Target,
   Lightbulb, Rocket, Heart
