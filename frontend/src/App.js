@@ -85,6 +85,16 @@ function App() {
     setQuoteItems([]);
   };
 
+  // If not authenticated, show login page
+  if (!isAuthenticated) {
+    return (
+      <div className="App">
+        <Login onLogin={() => setIsAuthenticated(true)} />
+      </div>
+    );
+  }
+
+  // If authenticated, show main app
   return (
     <QuoteContext.Provider value={{ 
       quoteItems, 
@@ -106,7 +116,6 @@ function App() {
               <Route path="/team" element={<Team />} />
               <Route path="/carteleria-digital" element={<CarteleriaDigital />} />
               <Route path="/carteleria-digital-2" element={<CarteleriaDigital2 />} />
-              <Route path="/esto-hacemos" element={<EstoHacemos />} />
               <Route path="/contacto" element={<Contact />} />
               <Route path="/cotizacion" element={<QuoteCart />} />
               <Route path="/eventos-kioskos" element={<EventosKioskos />} />
