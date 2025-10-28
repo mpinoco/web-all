@@ -3,7 +3,6 @@ import React from 'react';
 const PartnersCarousel = () => {
   const partners = [
     { name: 'JUSTO', logo: 'https://www.getjusto.com/hs-fs/hubfs/Logo%20Justo-1.png?width=300&height=100' },
-    { name: 'Emergent', logo: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"%3E%3Ctext x="10" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="%2322c55e"%3EEmergent%3C/text%3E%3C/svg%3E' },
     { name: 'IBM', logo: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80"%3E%3Cg fill="%231f70c1"%3E%3Crect x="20" y="20" width="160" height="8"/%3E%3Crect x="20" y="36" width="160" height="8"/%3E%3Crect x="20" y="52" width="160" height="8"/%3E%3Ctext x="70" y="45" font-family="Arial" font-size="28" font-weight="bold" fill="%231f70c1"%3EIBM%3C/text%3E%3C/g%3E%3C/svg%3E' },
     { name: 'Oracle', logo: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"%3E%3Ctext x="30" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="%23f80000"%3EORACLE%3C/text%3E%3C/svg%3E' },
     { name: 'NCR', logo: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60"%3E%3Ctext x="50" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="%23009fdb"%3ENCR%3C/text%3E%3C/svg%3E' },
