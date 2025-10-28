@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import '@/App.css';
+import Login from './pages/Login';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
@@ -18,7 +19,6 @@ import InteligenciaArtificial from './pages/InteligenciaArtificial';
 import Team from './pages/Team';
 import CarteleriaDigital from './pages/CarteleriaDigital';
 import CarteleriaDigital2 from './pages/CarteleriaDigital2';
-import EstoHacemos from './pages/EstoHacemos';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -30,6 +30,15 @@ export const QuoteContext = React.createContext();
 function App() {
   const [quoteItems, setQuoteItems] = useState([]);
   const [showAISearch, setShowAISearch] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  // Check authentication on mount
+  useEffect(() => {
+    const authStatus = localStorage.getItem('isAuthenticated');
+    if (authStatus === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   // Load quote items from localStorage
   useEffect(() => {
