@@ -169,28 +169,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Logo and IA Badge Section */}
-      <section className="py-6 md:py-8 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-start gap-4 md:gap-6">
-            {/* Logo */}
-            <div className="flex-shrink-0">
-              <img 
-                src="/images/logo_emergent_gris.png" 
-                alt="Emergent AI Logo" 
-                className="h-12 md:h-14 w-auto"
-              />
-            </div>
-            {/* Text */}
-            <div className="flex items-center">
-              <p className="text-base md:text-lg lg:text-xl font-semibold text-gray-700 text-center md:text-left">
-                Nueva imagen, misma cercanía + IA
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main KPI Section - Full 6 indicators */}
       <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-700 via-emerald-600 to-teal-700">
         <KPISection variant="main" />
