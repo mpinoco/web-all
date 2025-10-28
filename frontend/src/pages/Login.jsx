@@ -45,12 +45,12 @@ const Login = ({ onLogin }) => {
         ></div>
 
         {/* White Horizontal Bar at Top with Logo */}
-        <div className="w-full bg-white py-4 px-8 shadow-md relative z-10">
+        <div className="w-full bg-white py-2 px-8 shadow-md relative z-10">
           <div className="flex justify-end max-w-4xl ml-auto">
             <img 
               src="/images/allcom_logo_new.png" 
               alt="ALLCOM" 
-              className="h-16 md:h-20 w-auto"
+              className="h-32 md:h-40 w-auto"
             />
           </div>
         </div>
