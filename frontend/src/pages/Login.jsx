@@ -7,11 +7,11 @@ const Login = ({ onLogin }) => {
   const [currentMessage, setCurrentMessage] = useState(0);
 
   const aiMessages = [
-    { icon: Brain, text: "Integrando IA en cada solución", color: "from-purple-500 to-pink-500" },
-    { icon: Rocket, text: "Modernizando el retail chileno", color: "from-blue-500 to-cyan-500" },
-    { icon: Sparkles, text: "Innovación tecnológica en desarrollo", color: "from-emerald-500 to-teal-500" },
-    { icon: Cpu, text: "Experiencia + IA = Futuro del retail", color: "from-orange-500 to-red-500" },
-    { icon: Zap, text: "Nueva web: Más potente, más inteligente", color: "from-yellow-500 to-orange-500" },
+    { icon: Brain, text: "Integrando IA en cada solución", color: "#285490", borderColor: "border-[#285490]" },
+    { icon: Rocket, text: "Modernizando el retail chileno", color: "#557D9A", borderColor: "border-[#557D9A]" },
+    { icon: Sparkles, text: "Innovación tecnológica en desarrollo", color: "#7B9AA5", borderColor: "border-[#7B9AA5]" },
+    { icon: Cpu, text: "Experiencia + IA = Futuro del retail", color: "#9AB290", borderColor: "border-[#9AB290]" },
+    { icon: Zap, text: "Nueva web: Más potente, más inteligente", color: "#C8D69C", borderColor: "border-[#C8D69C]" },
   ];
 
   useEffect(() => {
@@ -34,6 +34,7 @@ const Login = ({ onLogin }) => {
   };
 
   const CurrentIcon = aiMessages[currentMessage].icon;
+  const currentColor = aiMessages[currentMessage].color;
 
   return (
     <div className="min-h-screen flex overflow-hidden">
@@ -63,13 +64,13 @@ const Login = ({ onLogin }) => {
           }}
         ></div>
 
-        {/* White Horizontal Bar at Top with Logo - Reduced height */}
-        <div className="w-full bg-white py-1 px-8 shadow-md relative z-10">
+        {/* White Horizontal Bar at Top with Logo - Height reduced by half */}
+        <div className="w-full bg-white py-0.5 px-8 shadow-md relative z-10">
           <div className="flex justify-end max-w-4xl ml-auto">
             <img 
               src="/images/allcom_logo_new.png" 
               alt="ALLCOM" 
-              className="h-32 md:h-40 w-auto"
+              className="h-28 md:h-32 w-auto"
             />
           </div>
         </div>
@@ -126,37 +127,48 @@ const Login = ({ onLogin }) => {
               </form>
             </div>
 
-            {/* AI Message Section - Animated */}
-            <div className="ml-auto w-72 mt-6">
-              <div className={`bg-gradient-to-r ${aiMessages[currentMessage].color} p-[2px] rounded-xl shadow-2xl transition-all duration-500 transform hover:scale-105`}>
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4">
+            {/* AI Message Section - Animated - 10% smaller */}
+            <div className="ml-auto w-64 mt-6">
+              <div 
+                className={`p-[2px] rounded-xl shadow-2xl transition-all duration-500 transform hover:scale-105`}
+                style={{ 
+                  background: `linear-gradient(135deg, ${currentColor} 0%, ${currentColor}DD 100%)`
+                }}
+              >
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3.5">
                   <div className="flex items-center gap-3">
                     {/* Animated Icon */}
                     <div className="relative">
-                      <div className={`absolute inset-0 bg-gradient-to-r ${aiMessages[currentMessage].color} rounded-full blur-lg opacity-50 animate-pulse`}></div>
-                      <div className={`relative bg-gradient-to-r ${aiMessages[currentMessage].color} p-3 rounded-full`}>
-                        <CurrentIcon className="w-6 h-6 text-white animate-bounce" />
+                      <div 
+                        className="absolute inset-0 rounded-full blur-lg opacity-50 animate-pulse"
+                        style={{ backgroundColor: currentColor }}
+                      ></div>
+                      <div 
+                        className="relative p-2.5 rounded-full"
+                        style={{ backgroundColor: currentColor }}
+                      >
+                        <CurrentIcon className="w-5 h-5 text-white animate-bounce" />
                       </div>
                     </div>
                     
                     {/* Message Text */}
                     <div className="flex-1">
-                      <p className="text-sm font-bold text-gray-800 leading-tight animate-fadeIn">
+                      <p className="text-xs font-bold text-gray-800 leading-tight animate-fadeIn">
                         {aiMessages[currentMessage].text}
                       </p>
                     </div>
                   </div>
                   
                   {/* Progress dots */}
-                  <div className="flex gap-1.5 mt-3 justify-center">
+                  <div className="flex gap-1.5 mt-2.5 justify-center">
                     {aiMessages.map((_, index) => (
                       <div
                         key={index}
-                        className={`h-1.5 rounded-full transition-all duration-300 ${
-                          index === currentMessage 
-                            ? 'w-8 bg-gradient-to-r ' + aiMessages[currentMessage].color
-                            : 'w-1.5 bg-gray-300'
-                        }`}
+                        className={`h-1.5 rounded-full transition-all duration-300`}
+                        style={{
+                          width: index === currentMessage ? '32px' : '6px',
+                          backgroundColor: index === currentMessage ? currentColor : '#D1D5DB'
+                        }}
                       />
                     ))}
                   </div>
